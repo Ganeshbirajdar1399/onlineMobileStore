@@ -20,6 +20,11 @@ export class CartComponent implements OnInit {
   emptyCart = '';
   totalAmount: number = 0;
 
+  //dialog
+  isDialogOpen: boolean = false;
+  dialogMessage: string = '';
+  subscriberIdToDelete: string = ''; // Store the subscriber ID to be deleted
+
   constructor(
     private viewportScroller: ViewportScroller,
     private globalService: GlobalService,
@@ -48,40 +53,67 @@ export class CartComponent implements OnInit {
   }
 
   removeItem(id: string): void {
-    this.toastr
-      .info('Are you sure you want to delete this product?', 'Confirm Deletion', {
-        closeButton: true,
-        progressBar: true,
-        tapToDismiss: true,
-        positionClass: 'toast-top-center',
-        timeOut: 0,
-        extendedTimeOut: 0,
-      })
-      .onTap.subscribe(() => {
-        // Proceed with deletion
-        this.globalService.removeFromCart(id).subscribe({
-          next: () => {
-            this.toastr.success('Product removed from cart!', 'Success');
-            this.getCartItem(); // Refresh the cart
-          },
-          error: (err) => {
-            console.error('Error removing product:', err);
-            this.toastr.error('Failed to remove product from cart', 'Error');
-          },
-        });
-      });
+    this.subscriberIdToDelete = id; // Store the ID for later use
+    this.dialogMessage =
+      'Are you sure you want to delete this product from cart?';
+    this.isDialogOpen = true;
   }
-  
+
+  // Handle the user response
+  handleConfirmation(confirmed: boolean): void {
+    this.isDialogOpen = false;
+
+    if (confirmed) {
+      this.globalService.removeFromCart(this.subscriberIdToDelete).subscribe(
+        () => {
+          this.toastr.success('Product removed from cart!', 'Success');
+          this.getCartItem();
+        },
+        () => this.toastr.error('Failed to clear the cart', 'Error')
+      );
+    } else {
+      this.toastr.info('Product deletion in cart is canceled', 'Info');
+    }
+  }
+  // removeItem(id: string): void {
+  //   this.toastr
+  //     .info('Are you sure you want to delete this product?', 'Confirm Deletion', {
+  //       closeButton: true,
+  //       progressBar: true,
+  //       tapToDismiss: true,
+  //       positionClass: 'toast-top-center',
+  //       timeOut: 0,
+  //       extendedTimeOut: 0,
+  //     })
+  //     .onTap.subscribe(() => {
+  //       // Proceed with deletion
+  //       this.globalService.removeFromCart(id).subscribe({
+  //         next: () => {
+  //           this.toastr.success('Product removed from cart!', 'Success');
+  //           this.getCartItem(); // Refresh the cart
+  //         },
+  //         error: (err) => {
+  //           console.error('Error removing product:', err);
+  //           this.toastr.error('Failed to remove product from cart', 'Error');
+  //         },
+  //       });
+  //     });
+  // }
+
   clearCart(): void {
     this.toastr
-      .info('Are you sure you want to clear the entire cart?', 'Confirm Clear Cart', {
-        closeButton: true,
-        progressBar: true,
-        tapToDismiss: true,
-        positionClass: 'toast-top-center',
-        timeOut: 0,
-        extendedTimeOut: 0,
-      })
+      .info(
+        'Are you sure you want to clear the entire cart?',
+        'Confirm Clear Cart',
+        {
+          closeButton: true,
+          progressBar: true,
+          tapToDismiss: true,
+          positionClass: 'toast-top-center',
+          timeOut: 0,
+          extendedTimeOut: 0,
+        }
+      )
       .onTap.subscribe(() => {
         // Proceed with clearing the cart
         this.globalService.clearCart().subscribe({
@@ -96,7 +128,6 @@ export class CartComponent implements OnInit {
         });
       });
   }
-  
 
   getTotal(): number {
     return this.globalService.getTotal();

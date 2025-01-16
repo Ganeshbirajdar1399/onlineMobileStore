@@ -12,6 +12,11 @@ import { ToastrService } from 'ngx-toastr';
 export class WishlistComponent {
   wishlistItems: any[] = [];
 
+  //dialog
+  isDialogOpen: boolean = false;
+  dialogMessage: string = '';
+  subscriberIdToDelete: string = ''; // Store the subscriber ID to be deleted
+
   constructor(
     private scroller: ViewportScroller,
     private globalService: GlobalService,
@@ -32,27 +37,54 @@ export class WishlistComponent {
 
   // Remove a single product from the wishlist
   removeFromWishlist(id: string): void {
-    this.toastr
-      .info(
-        'Are you sure you want to delete this product from the wishlist?',
-        'Confirm Deletion',
-        {
-          closeButton: true,
-          progressBar: true,
-          tapToDismiss: true,
-          positionClass: 'toast-top-center',
-          timeOut: 0,
-          extendedTimeOut: 0,
-        }
-      )
-      .onTap.pipe() // Simplified for example
-      .subscribe(() => {
-        this.globalService.removeFromWishlist(id).subscribe(() => {
-          this.toastr.success('Product removed from wishlist!', 'Success');
-          this.getWishlistItems(); // Refresh the wishlist
-        });
-      });
+    this.subscriberIdToDelete = id; // Store the ID for later use
+    this.dialogMessage =
+      'Are you sure you want to delete this product from wishlist?';
+    this.isDialogOpen = true;
   }
+
+  // Handle the user response
+  handleConfirmation(confirmed: boolean): void {
+    this.isDialogOpen = false;
+
+    if (confirmed) {
+      this.globalService
+        .removeFromWishlist(this.subscriberIdToDelete)
+        .subscribe(
+          () => {
+            this.toastr.success('Product removed from wishlist!', 'Success');
+            this.getWishlistItems();
+          },
+          () =>
+            this.toastr.error('Failed to remove product in wishlist', 'Error')
+        );
+    } else {
+      this.toastr.info('Product deletion from wishlist is canceled', 'Info');
+    }
+  }
+
+  // removeFromWishlist(id: string): void {
+  //   this.toastr
+  //     .info(
+  //       'Are you sure you want to delete this product from the wishlist?',
+  //       'Confirm Deletion',
+  //       {
+  //         closeButton: true,
+  //         progressBar: true,
+  //         tapToDismiss: true,
+  //         positionClass: 'toast-top-center',
+  //         timeOut: 0,
+  //         extendedTimeOut: 0,
+  //       }
+  //     )
+  //     .onTap.pipe() // Simplified for example
+  //     .subscribe(() => {
+  //       this.globalService.removeFromWishlist(id).subscribe(() => {
+  //         this.toastr.success('Product removed from wishlist!', 'Success');
+  //         this.getWishlistItems(); // Refresh the wishlist
+  //       });
+  //     });
+  // }
 
   // Clear the entire wishlist
   clearWishlist(): void {

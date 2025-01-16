@@ -86,19 +86,17 @@ export class CheckoutComponent implements OnInit {
     };
 
     // Send order data to GlobalService to place the order
-    this.globalService.placeOrder(orderData).subscribe(
-      (response) => {
-        this.toastr.success('Your order was placed successfully!', 'Success');
-        this.clearForm();
-        // Clear the cart after placing the order
-        this.globalService.clearCart().subscribe(() => {
-          this.cartItems = [];
-        });
+    this.globalService.placeOrder(orderData).subscribe((response) => {
+      this.toastr.success('Your order was placed successfully!', 'Success');
+      this.clearForm();
+      // Clear the cart after placing the order
+      this.globalService.clearCart().subscribe(() => {
+        this.cartItems = [];
+      });
 
-        // Redirect to the orders page after placing the order
-        this.router.navigate(['/orders']); // Replace with the appropriate path for orders component
-      }
-    );
+      // Redirect to the orders page after placing the order
+      this.router.navigate(['/orders']); // Replace with the appropriate path for orders component
+    });
   }
 
   clearForm() {

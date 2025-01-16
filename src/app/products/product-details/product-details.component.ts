@@ -50,7 +50,10 @@ export class ProductDetailsComponent implements OnInit {
   // Add product to the cart
   addToCart(product: any) {
     if (this.cartItems.some((item) => item.id === product.id)) {
-      this.toastr.warning('This product is already in the cart list!', 'Warning');
+      this.toastr.warning(
+        'This product is already in the cart list!',
+        'Warning'
+      );
       return;
     }
 

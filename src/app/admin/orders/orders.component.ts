@@ -60,6 +60,11 @@ export class OrdersComponent {
   itemsPerPage = 10;
   loggedInUser: any = null;
 
+  //dialog
+  isDialogOpen: boolean = false;
+  dialogMessage: string = '';
+  subscriberIdToDelete: string = ''; // Store the subscriber ID to be deleted
+
   constructor(
     private globalService: GlobalService,
     private authService: AuthService,
@@ -87,27 +92,49 @@ export class OrdersComponent {
       }
     });
   }
-
   deleteOrders(id: string): void {
-    this.toastr
-      .info('Are you sure you want to delete this order?', 'Confirm Deletion', {
-        closeButton: true,
-        progressBar: true,
-        tapToDismiss: true,
-        positionClass: 'toast-top-center',
-        timeOut: 0,
-        extendedTimeOut: 0,
-      })
-      .onTap.pipe()
-      .subscribe({
-        next: () => {
-          this.globalService.deleteOrder(id).subscribe(() => {
-            this.toastr.success('Order Deleted successfully!', 'Success');
-            this.fetchOrders(); // Refresh orders list
-          });
-        },
-      });
+    this.subscriberIdToDelete = id; // Store the ID for later use
+    this.dialogMessage = 'Are you sure you want to delete this order?';
+    this.isDialogOpen = true;
   }
+
+  // Handle the user response
+  handleConfirmation(confirmed: boolean): void {
+    this.isDialogOpen = false;
+
+    if (confirmed) {
+      this.globalService.deleteOrder(this.subscriberIdToDelete).subscribe(
+        () => {
+          this.toastr.success('Order Deleted successfully!', 'Success');
+          this.fetchOrders();
+        },
+        () => this.toastr.error('Failed to delete Order.', 'Error')
+      );
+    } else {
+      this.toastr.info('Order deletion canceled', 'Info');
+    }
+  }
+
+  // deleteOrders(id: string): void {
+  //   this.toastr
+  //     .info('Are you sure you want to delete this order?', 'Confirm Deletion', {
+  //       closeButton: true,
+  //       progressBar: true,
+  //       tapToDismiss: true,
+  //       positionClass: 'toast-top-center',
+  //       timeOut: 0,
+  //       extendedTimeOut: 0,
+  //     })
+  //     .onTap.pipe()
+  //     .subscribe({
+  //       next: () => {
+  //         this.globalService.deleteOrder(id).subscribe(() => {
+  //           this.toastr.success('Order Deleted successfully!', 'Success');
+  //           this.fetchOrders(); // Refresh orders list
+  //         });
+  //       },
+  //     });
+  // }
 
   get isAdmin(): boolean {
     return this.loggedInUser?.role === 'admin';

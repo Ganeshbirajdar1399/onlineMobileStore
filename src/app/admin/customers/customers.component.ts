@@ -30,6 +30,11 @@ export class CustomersComponent {
   page = 1;
   itemsPerPage = 20;
 
+  //dialog
+  isDialogOpen: boolean = false;
+  dialogMessage: string = '';
+  subscriberIdToDelete: string = ''; // Store the subscriber ID to be deleted
+
   constructor(
     private authService: AuthService,
     private toastr: ToastrService,
@@ -48,25 +53,48 @@ export class CustomersComponent {
   }
 
   deleteUser(id: string): void {
-    this.toastr
-      .info('Click to confirm deletion', 'Confirm Delete', {
-        closeButton: true,
-        progressBar: true,
-        tapToDismiss: true,
-        positionClass: 'toast-top-center',
-        timeOut: 0,
-        extendedTimeOut: 0,
-      })
-      .onTap.pipe(take(1))
-      .subscribe({
-        next: () => {
-          this.authService.deleteUserData(id).subscribe(() => {
-            this.toastr.success('User deleted successfully', 'Success');
-            this.fetchUsers(); // Refresh user list
-          });
-        },
-      });
+    this.subscriberIdToDelete = id; // Store the ID for later use
+    this.dialogMessage = 'Are you sure you want to delete this customer?';
+    this.isDialogOpen = true;
   }
+
+  // Handle the user response
+  handleConfirmation(confirmed: boolean): void {
+    this.isDialogOpen = false;
+
+    if (confirmed) {
+      this.authService.deleteUserData(this.subscriberIdToDelete).subscribe(
+        () => {
+          this.toastr.success('User deleted successfully', 'Success');
+          this.fetchUsers();
+        },
+        () => this.toastr.error('Failed to delete User.', 'Error')
+      );
+    } else {
+      this.toastr.info('User deletion canceled', 'Info');
+    }
+  }
+
+  // deleteUser(id: string): void {
+  //   this.toastr
+  //     .info('Click to confirm deletion', 'Confirm Delete', {
+  //       closeButton: true,
+  //       progressBar: true,
+  //       tapToDismiss: true,
+  //       positionClass: 'toast-top-center',
+  //       timeOut: 0,
+  //       extendedTimeOut: 0,
+  //     })
+  //     .onTap.pipe(take(1))
+  //     .subscribe({
+  //       next: () => {
+  //         this.authService.deleteUserData(id).subscribe(() => {
+  //           this.toastr.success('User deleted successfully', 'Success');
+  //           this.fetchUsers(); // Refresh user list
+  //         });
+  //       },
+  //     });
+  // }
 
   logout(): void {
     this.authService.logout();

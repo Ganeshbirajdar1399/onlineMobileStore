@@ -19,24 +19,15 @@ export class CompareService {
     this.fetchCompareItems();
   }
 
-  /**
-   * Fetch and update the compare list and its count
-   */
   private fetchCompareItems(): void {
     this.getCompareItems().subscribe((items) => this.updateList(items));
   }
 
-  /**
-   * Update the compare list and count subjects
-   */
   private updateList(items: any[]): void {
     this.compareSubject.next(items);
     this.compareCountSubject.next(items.length);
   }
 
-  /**
-   * Add a product to the compare list
-   */
   addToCompare(product: any): Observable<any> {
     const compareList = this.compareSubject.getValue();
 
@@ -56,9 +47,6 @@ export class CompareService {
     );
   }
 
-  /**
-   * Remove a product from the compare list
-   */
   removeFromCompare(id: string): Observable<any> {
     const updatedList = this.compareSubject.getValue().filter((item) => item.id !== id);
 
@@ -67,30 +55,18 @@ export class CompareService {
     );
   }
 
-  /**
-   * Fetch all compare items from the server
-   */
   getCompareItems(): Observable<any[]> {
     return this.http.get<any[]>(this.compareEndpoint);
   }
 
-  /**
-   * Clear the compare list
-   */
   clearCompare(): void {
     this.updateList([]);
   }
 
-  /**
-   * Get compare list as an observable
-   */
   getCompareObservable(): Observable<any[]> {
     return this.compareSubject.asObservable();
   }
 
-  /**
-   * Get compare count as an observable
-   */
   getCompareCountObservable(): Observable<number> {
     return this.compareCountSubject.asObservable();
   }

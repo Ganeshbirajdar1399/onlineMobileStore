@@ -1,529 +1,744 @@
 {
-    "products": [
-      {
-        "id": "ad6edaa5-d7c4-4abd-9620-779d6354fdaa",
-        "pname": "One Plus Nord 4 12/256 Obsidian Midnight",
-        "brand": "OnePlus",
-        "description": "1.    12 GB RAM | 256 GB ROM\n2.    17.12 cm (6.74 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
-        "color": "Obsidian Midnight",
-        "disksize": "256 GB",
-        "ram": "12 GB",
-        "psp": 32599,
-        "pop": 32999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494370/uploads/qpcsrjs9khvmp2gnc7mx.webp"
-      },
-      {
-        "id": "a50e6973-e22e-491c-8d54-23c0bcc6063d",
-        "pname": "Oneplus 12 16/512 GB Flowy Emerald",
-        "brand": "OnePlus",
-        "description": "1.    16 GB RAM | 512 GB ROM\n2.    17.32 cm (6.82 inch) Display\n3.    64MP Rear Camera\n4.    5400 mAh Battery",
-        "color": "Flowy Emerald",
-        "disksize": "512 GB",
-        "ram": "12 GB",
-        "psp": 69799,
-        "pop": 69999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494567/uploads/ho3t9mv86m8ptzxgmgth.webp"
-      },
-      {
-        "id": "16134257-10b4-43d7-8de0-a912b72d6660",
-        "pname": "Oneplus 12R 16/256 GB Iron Gray",
-        "brand": "OnePlus",
-        "description": "1.    16 GB RAM | 256 GB ROM\n2.    17.22 cm (6.78 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
-        "color": "Iron Gray",
-        "disksize": "256 GB",
-        "ram": "16 GB",
-        "psp": 45799,
-        "pop": 45999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494772/uploads/ydocvhkpksrcx0qssq9o.webp"
-      },
-      {
-        "id": "79620719-7867-4a67-a994-c11e42352425",
-        "pname": "Oneplus Nord 4 8/128 GB Oasis Green",
-        "brand": "OnePlus",
-        "description": "1.    8 GB RAM | 128 GB ROM\n2.    17.12 cm (6.74 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
-        "color": "Oasis Green",
-        "disksize": "128 GB",
-        "ram": "8 GB",
-        "psp": 27599,
-        "pop": 27999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494907/uploads/piru823ywbdo1mfcatpi.webp"
-      },
-      {
-        "id": "e0f0354a-ee0d-4729-ba09-e317130f7c13",
-        "pname": "Oneplus Nord Ce 4 Lite 8/256 GB Mega Blue",
-        "brand": "OnePlus",
-        "description": "1.    8 GB RAM | 256 GB ROM\n2.    16.94 cm (6.67 inch) Display\n3.    50MP Rear Camera\n4.   5500 mAh Battery",
-        "color": "Mega Blue",
-        "disksize": "256 GB",
-        "ram": "8 GB",
-        "psp": 20599,
-        "pop": 20999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495021/uploads/idlooixdvlsojn7vwoeh.webp"
-      },
-      {
-        "id": "edad0acd-a265-4dd9-af4a-c92dcf604bb6",
-        "pname": "Realme Rmx 3990 13 Pro 5G 8/128 GB Green",
-        "brand": "Realme",
-        "description": "1.    8 GB RAM | 128 GB ROM\n2.    17.02 cm (6.7 inch) Full HD+ Display\n3.    50MP + 8MP + 2MP | 32MP Front Camera\n4.    5200 mAh Battery\n5.   Snapdragon 7s Gen2 Processor",
-        "color": "GB Green",
-        "disksize": "128 GB",
-        "ram": "8 GB",
-        "psp": 23599,
-        "pop": 23999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495211/uploads/zyy1lbxxhdujxabgrr15.webp"
-      },
-      {
-        "id": "0c553908-3712-4aae-90d8-af6f9ffddea2",
-        "pname": "Realme Rmx 3990 13 Pro 5G 8/256 GB Monet Purple",
-        "brand": "Realme",
-        "description": "1. 8 GB RAM | 256 GB ROM\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 8MP + 2MP | 32MP Front Camera\n4. 5200 mAh Battery\n5. Snapdragon 7s Gen2 Processor",
-        "color": "Monet Purple",
-        "disksize": "256 GB",
-        "ram": "8 GB",
-        "psp": 28999,
-        "pop": 29499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495380/uploads/eezvifwjtmccv701mjrc.webp"
-      },
-      {
-        "id": "9d77aab8-5d79-4f54-b0a9-6a37a417734c",
-        "pname": "Realme RMX3782 C67 5G 6/128 GB Dark Purple",
-        "brand": "Realme",
-        "description": "1. 6 GB RAM | 128 GB ROM | Expandable Upto 2 TB\n2.17.07 cm (6.72 inch) Full HD+ Display\n3.50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Dimensity 6100+ Processor",
-        "color": "Dark Purple",
-        "disksize": "128 GB",
-        "ram": "6 GB",
-        "psp": 14099,
-        "pop": 14599,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495595/uploads/cwewnbdidxojxvaxgltk.webp"
-      },
-      {
-        "id": "fea6bced-b32c-498c-b60f-e454dd328518",
-        "pname": "Realme RMX3830 C51 4/64 GB Carbon Black",
-        "brand": "Realme",
-        "description": "1. 4 GB RAM | 64 GB ROM | Expandable Upto 2 TB\n2. 17.12 cm (6.74 inch) HD Display\n3. 50MP + 0.08MP | 5MP Front Camera\n4. 5000 mAh Battery\n5. T612 Processor\n",
-        "color": "Carbon Black",
-        "disksize": "64 GB",
-        "ram": "4 GB",
-        "psp": 7899,
-        "pop": 8499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495767/uploads/ja2okor6zsgejwwki9s5.webp"
-      },
-      {
-        "id": "7ec46a89-291a-43a8-a3e9-1ad70664bbce",
-        "pname": "Realme RMX3840 12 Pro+ 12/256 GB Navigator Beige",
-        "brand": "Realme",
-        "description": "1. 12 GB RAM | 256 GB ROM\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 8MP + 64MP | 32MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 7s Gen 2 Processor",
-        "color": "Navigator Beige",
-        "disksize": "256 GB",
-        "ram": "12 GB",
-        "psp": 30999,
-        "pop": 31499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495920/uploads/hzypfpqqgqtybc5qesds.webp"
-      },
-      {
-        "id": "32691410-e5a3-4d73-bf21-e44a907fafb0",
-        "pname": "Oppo 2565 A78 4G 8/128 GB Mist Black",
-        "brand": "OPPO",
-        "description": "1. 8 GB RAM | 128 GB ROM\n2. 16.33 cm (6.43 inch) Full HD+ AMOLED Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 680 Processor",
-        "color": "Mist Black",
-        "disksize": "128 GB",
-        "ram": "8 GB",
-        "psp": 15099,
-        "pop": 15499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736505426/uploads/l7299z8mhz0bagv7udee.webp"
-      },
-      {
-        "id": "fdbcc175-ab31-4e30-96f8-d61dd41bdc8a",
-        "pname": "Oppo 2553 A79 8/128 GB 5G Glowing Green",
-        "brand": "OPPO",
-        "description": "1. 8 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.07 cm (6.72 inch) Full HD+ Display\n3. Rear Camera: 50MP AI Camera, 2MP Portrait Camera Front Camera: 8MP Selfie Camera | 8MP Front Camera\n4. 5000 mAh Lithium Polymer Battery\n5. Mediatek Dimensity 6020 Processor",
-        "color": "Glowing Green",
-        "disksize": "128 GB",
-        "ram": "8 GB",
-        "psp": 17099,
-        "pop": 17499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736507655/uploads/ad6t1ht960rbw1zawpfs.webp"
-      },
-      {
-        "id": "c4beb96a-decf-4eaf-85b6-740b1303c312",
-        "pname": "Oppo 2579 A38 4/128 GB Glowing Black",
-        "brand": "OPPO",
-        "description": "1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 16.66 cm (6.56 inch) HD Display\n3. 50MP + 2MP | 5MP Front Camera\n4. 5000 mAh Battery\n5. Helio G70 (MT6769) Processor",
-        "color": "Glowing Black",
-        "disksize": "128 GB",
-        "ram": "4 GB",
-        "psp": 9899,
-        "pop": 9499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736507883/uploads/zpcidjyckix45ngtyyfa.webp"
-      },
-      {
-        "id": "1e0262e6-0884-44e0-8c0c-231e9dd7c63e",
-        "pname": "Oppo 2599 Reno 11 8/256 GB Wave Green",
-        "brand": "OPPO",
-        "description": "1. 8 GB RAM | 256 GB ROM | Expandable Upto 2 TB\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 8MP + 32MP | 32MP Front Camera\n4. 5000 mAh Battery\n5. Mediatek Dimensity 7050 Processor",
-        "color": "Wave Green",
-        "disksize": "256 GB",
-        "ram": "8 GB",
-        "psp": 29399,
-        "pop": 29999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508028/uploads/tedbhsqqnby89uwzdyle.webp"
-      },
-      {
-        "id": "8c4ed220-4019-4220-9ce2-65c9407599eb",
-        "pname": "Oppo 2603 F25 Pro 8/128 GB Ocean Blue",
-        "brand": "OPPO",
-        "description": "1. Display: 6.7 inches (17.02 cm), AMOLED, 120 Hz Refresh Rate\n2. Memory: 8GB RAM, 128GB ROM\n3. Processor: MediaTek Dimensity 7050, Octa Core, 2.6GHz\n4 . Camera: 64 MP + 2 MP + 8 MP Triple Rear & 32 MP Front Camera\n5. Battery: 5000 mAh with 67W SUPERVOOC Fast Charging\n6. USP: IP65 Water & Dust Resistant, Flash Snapshot, Natural Aesthetic Design",
-        "color": "Ocean Blue",
-        "disksize": "128 GB",
-        "ram": "8 GB",
-        "psp": 23299,
-        "pop": 23999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508143/uploads/y8y3jq8rds9inzoksumm.webp"
-      },
-      {
-        "id": "2c654f84-e92f-477b-91a4-1ed9b669a52d",
-        "pname": "Redmi 12 5G 6/128 GB Moonstone Silver",
-        "brand": "Redmi",
-        "description": "1. 6 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.25 cm (6.79 inch) Full HD+ Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 4 Gen 2 Processor",
-        "color": "Moonstone Silver",
-        "disksize": "128 GB",
-        "ram": "6 GB",
-        "psp": 12099,
-        "pop": 12499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508456/uploads/f53ezqjysmkccpi3pi29.webp"
-      },
-      {
-        "id": "7802f330-0c54-4418-bfd8-794a37c3dc63",
-        "pname": "Redmi 13 5G 6/128 GB Black Diamond",
-        "brand": "Redmi",
-        "description": "1. 6 GB RAM | 128 GB ROM\n2. 17.25 cm (6.79 inch) Full HD+ Display\n3. 108MP Rear Camera\n4. 5030 mAh Battery\n5. Qualcomm SM4450 Snapdragon 4 Gen 2 AE (4 nm) Processor",
-        "color": "Black Diamond",
-        "disksize": "128 GB",
-        "ram": "6 GB",
-        "psp": 12599,
-        "pop": 12999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508573/uploads/i4tv6vvvqtghdodttve3.webp"
-      },
-      {
-        "id": "e7b60e6e-4d90-406f-a4d0-8c77d489b0f1",
-        "pname": "Redmi 13C 5G 4/128 GB Starlih Black",
-        "brand": "Redmi",
-        "description": "1. Processor: Powerful MediaTek Dimensity 6100+ 5G SoC | 8GB of RAM including 4GB virtual | 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection | 50MP AI Dual camera |Fast Side fingerprint | 5000mAh Battery\n2. 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection, 600nits in High Brightness mode\n3. 50MP AI Dual camera with Primary sensor of f/1.8 (4-in-1 super pixel) with the following modes: Photo | Portrait | Night | Video | 50MP mode | Time-lapse | Classic film filters | Frame | HDR | Google lens | Voice Shutter |",
-        "color": "Starlih Black",
-        "disksize": "128 GB",
-        "ram": "4 GB",
-        "psp": 9999,
-        "pop": 10499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508699/uploads/gljf3ict93jis2wumbrz.webp"
-      },
-      {
-        "id": "e8e66236-28c9-4e94-a499-6c788f701d2e",
-        "pname": "Redmi 13C 5G 6/128 Startrail Green",
-        "brand": "Redmi",
-        "description": "1. Processor: Powerful MediaTek Dimensity 6100+ 5G SoC | 12GB of RAM including 6GB virtual | 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection | 50MP AI Dual camera |Fast Side fingerprint | 5000mAh Battery\n2. 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection, 600nits in High Brightness mode\n3. 50MP AI Dual camera with Primary sensor of f/1.8 (4-in-1 super pixel) with the following modes: Photo | Portrait | Night | Video | 50MP mode | Time-lapse | Classic film filters | Frame | HDR | Google lens | Voice Shutter |",
-        "color": "Startrail Green",
-        "disksize": "128 GB",
-        "ram": "6 GB",
-        "psp": 10799,
-        "pop": 11499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508881/uploads/nuwaeq1ysjlqojx7ef3x.webp"
-      },
-      {
-        "id": "4bfe379b-ad73-46b7-b157-ad40d0f3865b",
-        "pname": "Redmi 13C 5G 8/256 GB Starshin Green",
-        "brand": "Redmi",
-        "description": "1. 8 GB RAM | 256 GB ROM\n2. 17.12 cm (6.74 inch) Display\n3. 50MP Rear Camera\n4. 5000 mAh Battery",
-        "color": "Starshin Green",
-        "disksize": "256 GB",
-        "ram": "8 GB",
-        "psp": 12799,
-        "pop": 13299,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508979/uploads/c4pxp2yipyk1glcilejo.webp"
-      },
-      {
-        "id": "1da11aa5-e6b4-448d-a71e-656876be0b96",
-        "pname": "Samsung A055 A05 4/64 GB Black",
-        "brand": "Samsung",
-        "description": "1. 4 GB RAM | 64 GB ROM | Expandable Upto 1 TB\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 5MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. MediaTek Helio G85 Processor",
-        "color": "GB Black",
-        "disksize": "64 GB",
-        "ram": "4 GB",
-        "psp": 7899,
-        "pop": 8399,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509134/uploads/mjnpvww7rucfr0q1zv5s.webp"
-      },
-      {
-        "id": "fd33eff7-91f1-429f-ac6e-1063ee6a39f8",
-        "pname": "Samsung A057 A05S 6/128 GB Black",
-        "brand": "Samsung",
-        "description": "1. 6 GB RAM | 128 GB ROM\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 2MP + 2MP | 13MP Front Camera\n4. 5000 mAh Battery\n5. Qualcomm SM6225 Snapdragon 680 4G (6 nm) Processor",
-        "color": "GB Black",
-        "disksize": "128 GB",
-        "ram": "6 GB",
-        "psp": 12599,
-        "pop": 13599,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509261/uploads/tmrv4akkqaqqgagjcupt.webp"
-      },
-      {
-        "id": "6984fc96-1abf-4b5a-b1d4-3f586910ad08",
-        "pname": "Samsung A065 A06 4/128 GB Gold",
-        "brand": "Samsung",
-        "description": "1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.02 cm (6.7 inch) HD+ Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Mediatek Helio G85 Processo",
-        "color": "GB Gold",
-        "disksize": "128 GB",
-        "ram": "4 GB",
-        "psp": 11099,
-        "pop": 11599,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509385/uploads/log95zf0wg9nuyukbiwm.webp"
-      },
-      {
-        "id": "d92dbb98-6504-4c71-9d89-4a3b024960ce",
-        "pname": "Samsung A065 A06 4/64 GB Black",
-        "brand": "Samsung",
-        "description": "\n    1. 4 GB RAM | 64 GB ROM | Expandable Upto 1 TB\n    2. 17.02 cm (6.7 inch) HD+ Display\n    3. 50MP + 2MP | 8MP Front Camera\n    4. 5000 mAh Battery\n    5. Mediatek Helio G85 Processor",
-        "color": "GB Black",
-        "disksize": "64 GB",
-        "ram": "4 GB",
-        "psp": 9899,
-        "pop": 9999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509543/uploads/c14zrk6bpydmapglhdxg.webp"
-      },
-      {
-        "id": "844ae3c6-cd70-4c7b-a9d2-52497ee7ce78",
-        "pname": "Samsung A146 A14 5G 4/128 GB Black",
-        "brand": "Samsung",
-        "description": "    1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n    2.16.76 cm (6.6 inch) HD+ Display\n    3. 50MP + 2MP | 13MP Front Camera\n    4. 5000 mAh Lithium Ion Battery\n    5. SEC S5E8535 (Exynos 1330) Processor",
-        "color": "GB Black",
-        "disksize": "128 GB",
-        "ram": "4 GB",
-        "psp": 14099,
-        "pop": 14699,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509667/uploads/uoiakciyfvnllg88mf34.webp"
-      },
-      {
-        "id": "d4101b76-6daf-44f3-87b8-cdc3a0f1cca0",
-        "pname": "Vivo 2204 Y16 4/64 GB Drizzling Gold",
-        "brand": "Vivo",
-        "description": "    1. 13MP+2MP Rear Camera | 5MP Selfie Camera\n    2. 16.55 cm (6.51″ inch) HD+ LCD Display\n    3. Memory & SIM: 4GB RAM | 64GB internal memory\n    4. 10W fast charging with 5000mAh battery",
-        "color": "Drizzling Gold",
-        "disksize": "64 GB",
-        "ram": "4 GB",
-        "psp": 8999,
-        "pop": 9499,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509936/uploads/iyyfcms7s7kdjhcmxofx.webp"
-      },
-      {
-        "id": "fcc33cb4-7188-4c66-9bf0-9bb31b7b95e2",
-        "pname": "Vivo 2252 Y02T 4/64 GB Cosmic Grey",
-        "brand": "Vivo",
-        "description": "    1. Front 5 MP / Rear 8 MP\n    2. 16.53 cm (6.51″ inch) HD+ Eye Protection Screen\n    3. Memory & SIM: 4GB RAM | 64GB internal memory\n    4. 10W fast charging with 5000mAh battery",
-        "color": "Cosmic Grey",
-        "disksize": "64 GB",
-        "ram": "4 GB",
-        "psp": 7499,
-        "pop": 8999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509998/uploads/j2vvmgvyqyzkh5nose6o.webp"
-      },
-      {
-        "id": "fee668eb-bac6-4d1e-a5a8-2589bfecc851",
-        "pname": "Vivo 2310 Y17S 4/128 GB Forest Green",
-        "brand": "Vivo",
-        "description": "    1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n    2. 16.66 cm (6.56 inch) HD+ Display\n    3. 50MP + 2MP | 8MP Front Camera\n    4. 5000 mAh Battery\n    5. Helio G85 Processor",
-        "color": "Forest Green",
-        "disksize": "128 GB",
-        "ram": "4 GB",
-        "psp": 10199,
-        "pop": 10599,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736510081/uploads/b52obtk8ec5h86i90rzd.webp"
-      },
-      {
-        "id": "30d8caeb-d793-4b12-b42d-6ffc42728efa",
-        "pname": "Vivo 2307 Y200 5G 8/256 GB Jungle Green",
-        "brand": "Vivo",
-        "description": "    1. 16.94 cm (6.67 inch) Display\n    2. 64 MP, 2 MP Back Camera\n    3. 16 MP Selfie Camera\n    4. 8 GB Memory, 256 GB Storage\n    5. 4800 mAh Battery\n    6. SDM 4 Gen 1 Processor",
-        "color": "Jungle Green",
-        "disksize": "256 GB",
-        "ram": "8 GB",
-        "psp": 21499,
-        "pop": 21999,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736510173/uploads/hoxrxav4y1yxczkwhelo.webp"
-      },
-      {
-        "id": "ee6a07fd-fd5c-4d7c-b456-aa5645926f6e",
-        "pname": "Vivo 2303 V29E 8/128 GB Artistic Red",
-        "brand": "Vivo",
-        "description": "    1. Snapdragon 695 Processor\n    2. 17.22 cm (6.78 inch) Full HD+ Display\n    3. 64MP + 8MP | 50MP Front Camera\n    4. 5000 mAh Battery\n    5. 120 Hz 3D Curved Screen\n    6. Light, Sleek and Slim",
-        "color": "Artistic Red",
-        "disksize": "128 GB",
-        "ram": "8 GB",
-        "psp": 25299,
-        "pop": 25799,
-        "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736510283/uploads/vhbgmsuk3pu1qtiqoldd.webp"
-      }
-    ],
-    "users": [
-      {
-        "id": "0c44",
-        "firstName": "Shyam",
-        "lastName": "Kumar",
+  "products": [
+    {
+      "id": "ad6edaa5-d7c4-4abd-9620-779d6354fdaa",
+      "pname": "One Plus Nord 4 12/256 Obsidian Midnight",
+      "brand": "OnePlus",
+      "description": "1.    12 GB RAM | 256 GB ROM\n2.    17.12 cm (6.74 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
+      "color": "Obsidian Midnight",
+      "disksize": "256 GB",
+      "ram": "12 GB",
+      "psp": 32599,
+      "pop": 32999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494370/uploads/qpcsrjs9khvmp2gnc7mx.webp"
+    },
+    {
+      "id": "a50e6973-e22e-491c-8d54-23c0bcc6063d",
+      "pname": "Oneplus 12 16/512 GB Flowy Emerald",
+      "brand": "OnePlus",
+      "description": "1.    16 GB RAM | 512 GB ROM\n2.    17.32 cm (6.82 inch) Display\n3.    64MP Rear Camera\n4.    5400 mAh Battery",
+      "color": "Flowy Emerald",
+      "disksize": "512 GB",
+      "ram": "12 GB",
+      "psp": 69799,
+      "pop": 69999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494567/uploads/ho3t9mv86m8ptzxgmgth.webp"
+    },
+    {
+      "id": "16134257-10b4-43d7-8de0-a912b72d6660",
+      "pname": "Oneplus 12R 16/256 GB Iron Gray",
+      "brand": "OnePlus",
+      "description": "1.    16 GB RAM | 256 GB ROM\n2.    17.22 cm (6.78 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
+      "color": "Iron Gray",
+      "disksize": "256 GB",
+      "ram": "16 GB",
+      "psp": 45799,
+      "pop": 45999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494772/uploads/ydocvhkpksrcx0qssq9o.webp"
+    },
+    {
+      "id": "79620719-7867-4a67-a994-c11e42352425",
+      "pname": "Oneplus Nord 4 8/128 GB Oasis Green",
+      "brand": "OnePlus",
+      "description": "1.    8 GB RAM | 128 GB ROM\n2.    17.12 cm (6.74 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
+      "color": "Oasis Green",
+      "disksize": "128 GB",
+      "ram": "8 GB",
+      "psp": 27599,
+      "pop": 27999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494907/uploads/piru823ywbdo1mfcatpi.webp"
+    },
+    {
+      "id": "e0f0354a-ee0d-4729-ba09-e317130f7c13",
+      "pname": "Oneplus Nord Ce 4 Lite 8/256 GB Mega Blue",
+      "brand": "OnePlus",
+      "description": "1.    8 GB RAM | 256 GB ROM\n2.    16.94 cm (6.67 inch) Display\n3.    50MP Rear Camera\n4.   5500 mAh Battery",
+      "color": "Mega Blue",
+      "disksize": "256 GB",
+      "ram": "8 GB",
+      "psp": 20599,
+      "pop": 20999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495021/uploads/idlooixdvlsojn7vwoeh.webp"
+    },
+    {
+      "id": "edad0acd-a265-4dd9-af4a-c92dcf604bb6",
+      "pname": "Realme Rmx 3990 13 Pro 5G 8/128 GB Green",
+      "brand": "Realme",
+      "description": "1.    8 GB RAM | 128 GB ROM\n2.    17.02 cm (6.7 inch) Full HD+ Display\n3.    50MP + 8MP + 2MP | 32MP Front Camera\n4.    5200 mAh Battery\n5.   Snapdragon 7s Gen2 Processor",
+      "color": "GB Green",
+      "disksize": "128 GB",
+      "ram": "8 GB",
+      "psp": 23599,
+      "pop": 23999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495211/uploads/zyy1lbxxhdujxabgrr15.webp"
+    },
+    {
+      "id": "0c553908-3712-4aae-90d8-af6f9ffddea2",
+      "pname": "Realme Rmx 3990 13 Pro 5G 8/256 GB Monet Purple",
+      "brand": "Realme",
+      "description": "1. 8 GB RAM | 256 GB ROM\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 8MP + 2MP | 32MP Front Camera\n4. 5200 mAh Battery\n5. Snapdragon 7s Gen2 Processor",
+      "color": "Monet Purple",
+      "disksize": "256 GB",
+      "ram": "8 GB",
+      "psp": 28999,
+      "pop": 29499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495380/uploads/eezvifwjtmccv701mjrc.webp"
+    },
+    {
+      "id": "9d77aab8-5d79-4f54-b0a9-6a37a417734c",
+      "pname": "Realme RMX3782 C67 5G 6/128 GB Dark Purple",
+      "brand": "Realme",
+      "description": "1. 6 GB RAM | 128 GB ROM | Expandable Upto 2 TB\n2.17.07 cm (6.72 inch) Full HD+ Display\n3.50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Dimensity 6100+ Processor",
+      "color": "Dark Purple",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 14099,
+      "pop": 14599,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495595/uploads/cwewnbdidxojxvaxgltk.webp"
+    },
+    {
+      "id": "fea6bced-b32c-498c-b60f-e454dd328518",
+      "pname": "Realme RMX3830 C51 4/64 GB Carbon Black",
+      "brand": "Realme",
+      "description": "1. 4 GB RAM | 64 GB ROM | Expandable Upto 2 TB\n2. 17.12 cm (6.74 inch) HD Display\n3. 50MP + 0.08MP | 5MP Front Camera\n4. 5000 mAh Battery\n5. T612 Processor\n",
+      "color": "Carbon Black",
+      "disksize": "64 GB",
+      "ram": "4 GB",
+      "psp": 7899,
+      "pop": 8499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495767/uploads/ja2okor6zsgejwwki9s5.webp"
+    },
+    {
+      "id": "7ec46a89-291a-43a8-a3e9-1ad70664bbce",
+      "pname": "Realme RMX3840 12 Pro+ 12/256 GB Navigator Beige",
+      "brand": "Realme",
+      "description": "1. 12 GB RAM | 256 GB ROM\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 8MP + 64MP | 32MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 7s Gen 2 Processor",
+      "color": "Navigator Beige",
+      "disksize": "256 GB",
+      "ram": "12 GB",
+      "psp": 30999,
+      "pop": 31499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736495920/uploads/hzypfpqqgqtybc5qesds.webp"
+    },
+    {
+      "id": "32691410-e5a3-4d73-bf21-e44a907fafb0",
+      "pname": "Oppo 2565 A78 4G 8/128 GB Mist Black",
+      "brand": "OPPO",
+      "description": "1. 8 GB RAM | 128 GB ROM\n2. 16.33 cm (6.43 inch) Full HD+ AMOLED Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 680 Processor",
+      "color": "Mist Black",
+      "disksize": "128 GB",
+      "ram": "8 GB",
+      "psp": 15099,
+      "pop": 15499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736505426/uploads/l7299z8mhz0bagv7udee.webp"
+    },
+    {
+      "id": "fdbcc175-ab31-4e30-96f8-d61dd41bdc8a",
+      "pname": "Oppo 2553 A79 8/128 GB 5G Glowing Green",
+      "brand": "OPPO",
+      "description": "1. 8 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.07 cm (6.72 inch) Full HD+ Display\n3. Rear Camera: 50MP AI Camera, 2MP Portrait Camera Front Camera: 8MP Selfie Camera | 8MP Front Camera\n4. 5000 mAh Lithium Polymer Battery\n5. Mediatek Dimensity 6020 Processor",
+      "color": "Glowing Green",
+      "disksize": "128 GB",
+      "ram": "8 GB",
+      "psp": 17099,
+      "pop": 17499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736507655/uploads/ad6t1ht960rbw1zawpfs.webp"
+    },
+    {
+      "id": "c4beb96a-decf-4eaf-85b6-740b1303c312",
+      "pname": "Oppo 2579 A38 4/128 GB Glowing Black",
+      "brand": "OPPO",
+      "description": "1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 16.66 cm (6.56 inch) HD Display\n3. 50MP + 2MP | 5MP Front Camera\n4. 5000 mAh Battery\n5. Helio G70 (MT6769) Processor",
+      "color": "Glowing Black",
+      "disksize": "128 GB",
+      "ram": "4 GB",
+      "psp": 9899,
+      "pop": 9499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736507883/uploads/zpcidjyckix45ngtyyfa.webp"
+    },
+    {
+      "id": "1e0262e6-0884-44e0-8c0c-231e9dd7c63e",
+      "pname": "Oppo 2599 Reno 11 8/256 GB Wave Green",
+      "brand": "OPPO",
+      "description": "1. 8 GB RAM | 256 GB ROM | Expandable Upto 2 TB\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 8MP + 32MP | 32MP Front Camera\n4. 5000 mAh Battery\n5. Mediatek Dimensity 7050 Processor",
+      "color": "Wave Green",
+      "disksize": "256 GB",
+      "ram": "8 GB",
+      "psp": 29399,
+      "pop": 29999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508028/uploads/tedbhsqqnby89uwzdyle.webp"
+    },
+    {
+      "id": "8c4ed220-4019-4220-9ce2-65c9407599eb",
+      "pname": "Oppo 2603 F25 Pro 8/128 GB Ocean Blue",
+      "brand": "OPPO",
+      "description": "1. Display: 6.7 inches (17.02 cm), AMOLED, 120 Hz Refresh Rate\n2. Memory: 8GB RAM, 128GB ROM\n3. Processor: MediaTek Dimensity 7050, Octa Core, 2.6GHz\n4 . Camera: 64 MP + 2 MP + 8 MP Triple Rear & 32 MP Front Camera\n5. Battery: 5000 mAh with 67W SUPERVOOC Fast Charging\n6. USP: IP65 Water & Dust Resistant, Flash Snapshot, Natural Aesthetic Design",
+      "color": "Ocean Blue",
+      "disksize": "128 GB",
+      "ram": "8 GB",
+      "psp": 23299,
+      "pop": 23999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508143/uploads/y8y3jq8rds9inzoksumm.webp"
+    },
+    {
+      "id": "2c654f84-e92f-477b-91a4-1ed9b669a52d",
+      "pname": "Redmi 12 5G 6/128 GB Moonstone Silver",
+      "brand": "Redmi",
+      "description": "1. 6 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.25 cm (6.79 inch) Full HD+ Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 4 Gen 2 Processor",
+      "color": "Moonstone Silver",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 12099,
+      "pop": 12499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508456/uploads/f53ezqjysmkccpi3pi29.webp"
+    },
+    {
+      "id": "7802f330-0c54-4418-bfd8-794a37c3dc63",
+      "pname": "Redmi 13 5G 6/128 GB Black Diamond",
+      "brand": "Redmi",
+      "description": "1. 6 GB RAM | 128 GB ROM\n2. 17.25 cm (6.79 inch) Full HD+ Display\n3. 108MP Rear Camera\n4. 5030 mAh Battery\n5. Qualcomm SM4450 Snapdragon 4 Gen 2 AE (4 nm) Processor",
+      "color": "Black Diamond",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 12599,
+      "pop": 12999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508573/uploads/i4tv6vvvqtghdodttve3.webp"
+    },
+    {
+      "id": "e7b60e6e-4d90-406f-a4d0-8c77d489b0f1",
+      "pname": "Redmi 13C 5G 4/128 GB Starlih Black",
+      "brand": "Redmi",
+      "description": "1. Processor: Powerful MediaTek Dimensity 6100+ 5G SoC | 8GB of RAM including 4GB virtual | 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection | 50MP AI Dual camera |Fast Side fingerprint | 5000mAh Battery\n2. 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection, 600nits in High Brightness mode\n3. 50MP AI Dual camera with Primary sensor of f/1.8 (4-in-1 super pixel) with the following modes: Photo | Portrait | Night | Video | 50MP mode | Time-lapse | Classic film filters | Frame | HDR | Google lens | Voice Shutter |",
+      "color": "Starlih Black",
+      "disksize": "128 GB",
+      "ram": "4 GB",
+      "psp": 9999,
+      "pop": 10499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508699/uploads/gljf3ict93jis2wumbrz.webp"
+    },
+    {
+      "id": "e8e66236-28c9-4e94-a499-6c788f701d2e",
+      "pname": "Redmi 13C 5G 6/128 Startrail Green",
+      "brand": "Redmi",
+      "description": "1. Processor: Powerful MediaTek Dimensity 6100+ 5G SoC | 12GB of RAM including 6GB virtual | 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection | 50MP AI Dual camera |Fast Side fingerprint | 5000mAh Battery\n2. 6.74″ HD+ 90Hz display with Corning Gorilla Glass 3 Protection, 600nits in High Brightness mode\n3. 50MP AI Dual camera with Primary sensor of f/1.8 (4-in-1 super pixel) with the following modes: Photo | Portrait | Night | Video | 50MP mode | Time-lapse | Classic film filters | Frame | HDR | Google lens | Voice Shutter |",
+      "color": "Startrail Green",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 10799,
+      "pop": 11499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508881/uploads/nuwaeq1ysjlqojx7ef3x.webp"
+    },
+    {
+      "id": "4bfe379b-ad73-46b7-b157-ad40d0f3865b",
+      "pname": "Redmi 13C 5G 8/256 GB Starshin Green",
+      "brand": "Redmi",
+      "description": "1. 8 GB RAM | 256 GB ROM\n2. 17.12 cm (6.74 inch) Display\n3. 50MP Rear Camera\n4. 5000 mAh Battery",
+      "color": "Starshin Green",
+      "disksize": "256 GB",
+      "ram": "8 GB",
+      "psp": 12799,
+      "pop": 13299,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508979/uploads/c4pxp2yipyk1glcilejo.webp"
+    },
+    {
+      "id": "1da11aa5-e6b4-448d-a71e-656876be0b96",
+      "pname": "Samsung A055 A05 4/64 GB Black",
+      "brand": "Samsung",
+      "description": "1. 4 GB RAM | 64 GB ROM | Expandable Upto 1 TB\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 5MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. MediaTek Helio G85 Processor",
+      "color": "GB Black",
+      "disksize": "64 GB",
+      "ram": "4 GB",
+      "psp": 7899,
+      "pop": 8399,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509134/uploads/mjnpvww7rucfr0q1zv5s.webp"
+    },
+    {
+      "id": "fd33eff7-91f1-429f-ac6e-1063ee6a39f8",
+      "pname": "Samsung A057 A05S 6/128 GB Black",
+      "brand": "Samsung",
+      "description": "1. 6 GB RAM | 128 GB ROM\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 2MP + 2MP | 13MP Front Camera\n4. 5000 mAh Battery\n5. Qualcomm SM6225 Snapdragon 680 4G (6 nm) Processor",
+      "color": "GB Black",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 12599,
+      "pop": 13599,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509261/uploads/tmrv4akkqaqqgagjcupt.webp"
+    },
+    {
+      "id": "6984fc96-1abf-4b5a-b1d4-3f586910ad08",
+      "pname": "Samsung A065 A06 4/128 GB Gold",
+      "brand": "Samsung",
+      "description": "1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.02 cm (6.7 inch) HD+ Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Mediatek Helio G85 Processo",
+      "color": "GB Gold",
+      "disksize": "128 GB",
+      "ram": "4 GB",
+      "psp": 11099,
+      "pop": 11599,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509385/uploads/log95zf0wg9nuyukbiwm.webp"
+    },
+    {
+      "id": "d92dbb98-6504-4c71-9d89-4a3b024960ce",
+      "pname": "Samsung A065 A06 4/64 GB Black",
+      "brand": "Samsung",
+      "description": "\n    1. 4 GB RAM | 64 GB ROM | Expandable Upto 1 TB\n    2. 17.02 cm (6.7 inch) HD+ Display\n    3. 50MP + 2MP | 8MP Front Camera\n    4. 5000 mAh Battery\n    5. Mediatek Helio G85 Processor",
+      "color": "GB Black",
+      "disksize": "64 GB",
+      "ram": "4 GB",
+      "psp": 9899,
+      "pop": 9999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509543/uploads/c14zrk6bpydmapglhdxg.webp"
+    },
+    {
+      "id": "844ae3c6-cd70-4c7b-a9d2-52497ee7ce78",
+      "pname": "Samsung A146 A14 5G 4/128 GB Black",
+      "brand": "Samsung",
+      "description": "    1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n    2.16.76 cm (6.6 inch) HD+ Display\n    3. 50MP + 2MP | 13MP Front Camera\n    4. 5000 mAh Lithium Ion Battery\n    5. SEC S5E8535 (Exynos 1330) Processor",
+      "color": "GB Black",
+      "disksize": "128 GB",
+      "ram": "4 GB",
+      "psp": 14099,
+      "pop": 14699,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509667/uploads/uoiakciyfvnllg88mf34.webp"
+    },
+    {
+      "id": "d4101b76-6daf-44f3-87b8-cdc3a0f1cca0",
+      "pname": "Vivo 2204 Y16 4/64 GB Drizzling Gold",
+      "brand": "Vivo",
+      "description": "    1. 13MP+2MP Rear Camera | 5MP Selfie Camera\n    2. 16.55 cm (6.51″ inch) HD+ LCD Display\n    3. Memory & SIM: 4GB RAM | 64GB internal memory\n    4. 10W fast charging with 5000mAh battery",
+      "color": "Drizzling Gold",
+      "disksize": "64 GB",
+      "ram": "4 GB",
+      "psp": 8999,
+      "pop": 9499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509936/uploads/iyyfcms7s7kdjhcmxofx.webp"
+    },
+    {
+      "id": "fcc33cb4-7188-4c66-9bf0-9bb31b7b95e2",
+      "pname": "Vivo 2252 Y02T 4/64 GB Cosmic Grey",
+      "brand": "Vivo",
+      "description": "    1. Front 5 MP / Rear 8 MP\n    2. 16.53 cm (6.51″ inch) HD+ Eye Protection Screen\n    3. Memory & SIM: 4GB RAM | 64GB internal memory\n    4. 10W fast charging with 5000mAh battery",
+      "color": "Cosmic Grey",
+      "disksize": "64 GB",
+      "ram": "4 GB",
+      "psp": 7499,
+      "pop": 8999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509998/uploads/j2vvmgvyqyzkh5nose6o.webp"
+    },
+    {
+      "id": "fee668eb-bac6-4d1e-a5a8-2589bfecc851",
+      "pname": "Vivo 2310 Y17S 4/128 GB Forest Green",
+      "brand": "Vivo",
+      "description": "    1. 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n    2. 16.66 cm (6.56 inch) HD+ Display\n    3. 50MP + 2MP | 8MP Front Camera\n    4. 5000 mAh Battery\n    5. Helio G85 Processor",
+      "color": "Forest Green",
+      "disksize": "128 GB",
+      "ram": "4 GB",
+      "psp": 10199,
+      "pop": 10599,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736510081/uploads/b52obtk8ec5h86i90rzd.webp"
+    },
+    {
+      "id": "30d8caeb-d793-4b12-b42d-6ffc42728efa",
+      "pname": "Vivo 2307 Y200 5G 8/256 GB Jungle Green",
+      "brand": "Vivo",
+      "description": "    1. 16.94 cm (6.67 inch) Display\n    2. 64 MP, 2 MP Back Camera\n    3. 16 MP Selfie Camera\n    4. 8 GB Memory, 256 GB Storage\n    5. 4800 mAh Battery\n    6. SDM 4 Gen 1 Processor",
+      "color": "Jungle Green",
+      "disksize": "256 GB",
+      "ram": "8 GB",
+      "psp": 21499,
+      "pop": 21999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736510173/uploads/hoxrxav4y1yxczkwhelo.webp"
+    },
+    {
+      "id": "ee6a07fd-fd5c-4d7c-b456-aa5645926f6e",
+      "pname": "Vivo 2303 V29E 8/128 GB Artistic Red",
+      "brand": "Vivo",
+      "description": "    1. Snapdragon 695 Processor\n    2. 17.22 cm (6.78 inch) Full HD+ Display\n    3. 64MP + 8MP | 50MP Front Camera\n    4. 5000 mAh Battery\n    5. 120 Hz 3D Curved Screen\n    6. Light, Sleek and Slim",
+      "color": "Artistic Red",
+      "disksize": "128 GB",
+      "ram": "8 GB",
+      "psp": 25299,
+      "pop": 25799,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736510283/uploads/vhbgmsuk3pu1qtiqoldd.webp"
+    }
+  ],
+  "users": [
+    {
+      "id": "d5f0ff93-0ed6-4da9-bbad-c36cac0c374f",
+      "firstName": "Shyam",
+      "lastName": "Kumar",
+      "password": "11221122",
+      "email": "Password@123",
+      "mobile": "9999999999",
+      "address": "Pune",
+      "role": "user"
+    },
+    {
+      "id": "d5f0ff93-0ed6-4da9-bbad-c36cac0c375c",
+      "firstName": "Ram",
+      "lastName": "Kumar",
+      "password": "Ram@12345",
+      "email": "rk1@gmail.com",
+      "mobile": "9999999999",
+      "address": "Pune",
+      "role": "admin"
+    },
+    {
+      "id": "92234dc9-61d4-4085-9869-660d87273757",
+      "firstName": "user1",
+      "lastName": "user1",
+      "email": "user1@gmail.com",
+      "mobile": "5555555555",
+      "password": "Password@123",
+      "address": "user1",
+      "role": "user"
+    },
+    {
+      "id": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
+      "firstName": "Om",
+      "lastName": "Om",
+      "email": "user2@gmail.com",
+      "mobile": "6666666666",
+      "password": "Password@123",
+      "address": "user2",
+      "role": "user"
+    },
+    {
+      "id": "9dd64048-71c4-48e1-9efd-59b375fbbaa7",
+      "firstName": "Amar",
+      "lastName": "Amar",
+      "email": "user3@gmail.com",
+      "mobile": "7777777777",
+      "password": "Password@123",
+      "address": "ddddd",
+      "role": "user"
+    },
+    {
+      "id": "92234dc9-61d4-4085-9869-660d87273757",
+      "firstName": "Vishal",
+      "lastName": "Vishal",
+      "email": "user4@gmail.com",
+      "mobile": "8888888888",
+      "password": "Password@123",
+      "address": "user1",
+      "role": "user"
+    },
+    {
+      "id": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
+      "firstName": "Aman",
+      "lastName": "Aman",
+      "email": "user5@gmail.com",
+      "mobile": "9999999999",
+      "password": "Password@123",
+      "address": "user2",
+      "role": "user"
+    },
+    {
+      "id": "9dd64048-71c4-48e1-9efd-59b375fbbaa7",
+      "firstName": "Anand",
+      "lastName": "Anand",
+      "email": "user6@gmail.com",
+      "mobile": "0000000000",
+      "password": "Password@123",
+      "address": "ddddd",
+      "role": "user"
+    }
+  ],
+  "otherinfo": [
+    {
+      "id": "eee85bf5-771b-4797-848b-6d4c3d6c9fe7",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sit cumque a temporibus ducimus officiis voluptatum cum aliquid laudantium nihil expedita adipisci, sed eius pariatur eos magni nemo ea quibusdam. ",
+      "location": "1234 Market Street, San Francisco, CA",
+      "contactNo": "+91 9999999999",
+      "email": "abc12@gmail.com",
+      "wbrand": "Mobile Shop",
+      "facebook": "https://www.facebook.com/",
+      "twitter": "https://x.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/",
+      "cc": "© 2024 MobileShop. All Rights Reserved. ",
+      "image": [
+        "https://res.cloudinary.com/djwzctllj/image/upload/v1736439185/uploads/rjip8tdzneeawqxelir7.jpg",
+        "https://res.cloudinary.com/djwzctllj/image/upload/v1736439208/uploads/m4ohqmyvyjxtnnofe1q2.jpg",
+        "https://res.cloudinary.com/djwzctllj/image/upload/v1736439222/uploads/ew4zqtbeshdnoab8tidi.jpg",
+        "https://res.cloudinary.com/djwzctllj/image/upload/v1736439227/uploads/urcv8vkzlec3jeyjgrpf.jpg",
+        "https://res.cloudinary.com/djwzctllj/image/upload/v1736439233/uploads/j9zgsferwbcdfquxpesf.jpg"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "2cd2",
+      "customer": {
+        "name": "Shyam kumar",
+        "contactNo": "9900990099",
         "email": "sk1@gmail.com",
-        "mobile": "9090098765",
         "address": "Pune",
-        "role": "user"
+        "billingAddress": "Mumbai"
       },
-      {
-        "id": "0c44",
-        "firstName": "Shyam",
-        "lastName": "Kumar",
+      "userId": "1736601982241",
+      "items": [
+        {
+          "pname": "Oneplus Nord 4 8/128 GB Oasis Green",
+          "psp": 27599,
+          "quantity": 1,
+          "ram": "8 GB",
+          "disksize": "128 GB"
+        }
+      ],
+      "totalAmount": 27599,
+      "orderDate": "2025-01-11T17:41:35.679Z"
+    },
+    {
+      "id": "e670",
+      "customer": {
+        "name": "Shyam kumar",
+        "contactNo": "9900990099",
         "email": "sk1@gmail.com",
-        "mobile": "9090098765",
-        "password": "12345678",
-        "address": "Pune",
-        "role": "user"
-      },
-      {
-        "id": "32b719ee-7b80-4c8e-976f-d2c8804338c9",
-        "firstName": "Aman test",
-        "lastName": "Deep",
-        "password": "12121212",
-        "email": "ad1@gmail.com",
-        "mobile": "9900889977",
-        "address": "Pune",
-        "role": "user"
-      },
-      {
-        "id": "5111",
-        "firstName": "Ram",
-        "lastName": "Kumar",
-        "password": "11221122",
-        "email": "rk1@gmail.com",
-        "mobile": "8877889900",
         "address": "Satara",
-        "role": "admin"
+        "billingAddress": "Pune"
       },
-      {
-        "id": "",
-        "firstName": "Aman",
-        "lastName": "Chopda",
+      "userId": "1736601982241",
+      "items": [
+        {
+          "pname": "Oneplus 12 16/512 GB Flowy Emerald",
+          "psp": 69799,
+          "quantity": 1,
+          "ram": "12 GB",
+          "disksize": "512 GB"
+        }
+      ],
+      "totalAmount": 69799,
+      "orderDate": "2025-01-11T17:48:41.267Z"
+    },
+    {
+      "id": "d9dd",
+      "customer": {
+        "name": "Aman Chopda",
+        "contactNo": "0099009900",
         "email": "ac1@gmail.com",
-        "mobile": "8877889900",
-        "password": "12345678",
         "address": "Pune",
-        "role": "admin"
-      }
-    ],
-    "cart": [],
-    "compare": [
-      {
-        "id": "6bd8b542-4617-4810-979c-589b138f7fc5",
-        "pname": "Lava A055 A05 4/64 GB Black",
-        "brand": "Lava",
-        "description": "1.    4 GB RAM | 64 GB ROM | Expandable Upto 1 TB\n2.   17.02 cm (6.7 inch) Full HD+ Display\n3.    50MP + 5MP | 8MP Front Camera\n4.    5000 mAh Battery\n5.    MediaTek Helio G85 Processor",
-        "color": "Black",
-        "disksize": "64 GB",
-        "ram": "4 GB",
-        "psp": 7999,
-        "pop": 8500,
-        "image": "http://localhost:3001/uploads/1734976516925.webp"
+        "billingAddress": "Pune"
       },
-      {
-        "id": "6bd8b548-4617-4810-979c-589b138f7fc4",
-        "pname": "Lava A055 A05 4/64 GB Black",
-        "brand": "Lava",
-        "description": "1.    4 GB RAM | 64 GB ROM | Expandable Upto 1 TB\n2.   17.02 cm (6.7 inch) Full HD+ Display\n3.    50MP + 5MP | 8MP Front Camera\n4.    5000 mAh Battery\n5.    MediaTek Helio G85 Processor",
-        "color": "Cobalt Blue",
-        "disksize": "128 GB",
-        "ram": "4 GB",
-        "psp": 7899,
-        "pop": 8500,
-        "image": "http://localhost:3001/uploads/1734976538430.webp"
-      }
-    ],
-    "wishlist": [
-      {
-        "id": "bc23d1f5-4220-439c-817e-529162002ad3",
-        "pname": "OnePlus A057 A05S 6/128 GB Light Green",
-        "brand": "OnePlus",
-        "description": "1. 8 GB RAM | 128 GB ROM\n    2. 17.02 cm (6.7 inch) Full HD+ Display\n    3. 50MP + 8MP + 2MP | 32MP Front Camera\n    4. 5200 mAh Battery\n    5. Snapdragon 7s Gen2 Processor",
-        "color": " Light Green",
-        "disksize": "128 GB",
-        "ram": "8 GB",
-        "psp": 13500,
-        "pop": 14500,
-        "image": "http://localhost:3001/uploads/1734975660382.webp"
-      }
-    ],
-    "otherinfo": [
-      {
-        "id": "eee85bf5-771b-4797-848b-6d4c3d6c9fe7",
-        "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sit cumque a temporibus ducimus officiis voluptatum cum aliquid laudantium nihil expedita adipisci, sed eius pariatur eos magni nemo ea quibusdam. ",
-        "location": "1234 Market Street, San Francisco, CA",
-        "contactNo": "+91 9999999999",
-        "email": "abc12@gmail.com",
-        "wbrand": "www.gbmobileshopee.com",
-        "facebook": "https://www.facebook.com/",
-        "twitter": "https://x.com/",
-        "instagram": "https://www.instagram.com/",
-        "youtube": "https://www.youtube.com/",
-        "cc": "© 2024 MobileShop. All Rights Reserved. ",
-        "image": [
-          "https://res.cloudinary.com/djwzctllj/image/upload/v1736439185/uploads/rjip8tdzneeawqxelir7.jpg",
-          "https://res.cloudinary.com/djwzctllj/image/upload/v1736439208/uploads/m4ohqmyvyjxtnnofe1q2.jpg",
-          "https://res.cloudinary.com/djwzctllj/image/upload/v1736439222/uploads/ew4zqtbeshdnoab8tidi.jpg",
-          "https://res.cloudinary.com/djwzctllj/image/upload/v1736439227/uploads/urcv8vkzlec3jeyjgrpf.jpg",
-          "https://res.cloudinary.com/djwzctllj/image/upload/v1736439233/uploads/j9zgsferwbcdfquxpesf.jpg"
-        ]
-      }
-    ],
-    "orders": [
-      {
-        "id": "e56f",
-        "customer": {
-          "name": "Anand Kumar",
-          "contactNo": "9900990099",
-          "email": "ak1@gmail.com",
-          "address": "Pune",
-          "billingAddress": "Pune"
-        },
-        "items": [
-          {
-            "pname": "Samsung A057 A05S 6/128 GB Light Green",
-            "psp": 13500,
-            "quantity": 1,
-            "ram": "8 GB",
-            "disksize": "128 GB"
-          },
-          {
-            "pname": "Samsung A055 A05 4/64 GB Black",
-            "psp": 7899,
-            "quantity": 1,
-            "ram": "4 GB",
-            "disksize": "128 GB"
-          }
-        ],
-        "totalAmount": 21399,
-        "orderDate": "2025-01-09T10:28:42.590Z"
+      "userId": "1736618026302",
+      "items": [
+        {
+          "pname": "Oneplus 12R 16/256 GB Iron Gray",
+          "psp": 45799,
+          "quantity": 1,
+          "ram": "16 GB",
+          "disksize": "256 GB"
+        }
+      ],
+      "totalAmount": 45799,
+      "orderDate": "2025-01-11T17:54:23.418Z"
+    },
+    {
+      "id": "0f1c",
+      "customer": {
+        "name": "Aman Chopda",
+        "contactNo": "0099009900",
+        "email": "ac1@gmail.com",
+        "address": "Pune",
+        "billingAddress": "Mumbai"
       },
-      {
-        "id": "9861",
-        "customer": {
-          "name": "aaaa",
-          "contactNo": "6666",
-          "email": "dd@dddd",
-          "address": "ddd",
-          "billingAddress": "ddd"
-        },
-        "items": [
-          {
-            "pname": "Realme RMX3840 12 Pro+ 12/256 GB Navigator Beige",
-            "psp": 30999,
-            "quantity": 1,
-            "ram": "12 GB",
-            "disksize": "256 GB"
-          }
-        ],
-        "totalAmount": 30999,
-        "orderDate": "2025-01-10T11:04:27.556Z"
-      }
-    ]
-  }
+      "userId": "1736618026302",
+      "items": [
+        {
+          "pname": "Realme Rmx 3990 13 Pro 5G 8/128 GB Green",
+          "psp": 23599,
+          "quantity": 1,
+          "ram": "8 GB",
+          "disksize": "128 GB"
+        }
+      ],
+      "totalAmount": 23599,
+      "orderDate": "2025-01-11T17:54:58.097Z"
+    },
+    {
+      "id": "1542",
+      "customer": {
+        "name": "Aman Aman",
+        "contactNo": "9999999999",
+        "email": "user5@gmail.com",
+        "address": "sdfsf",
+        "billingAddress": "sfsdf"
+      },
+      "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
+      "items": [
+        {
+          "pname": "One Plus Nord 4 12/256 Obsidian Midnight",
+          "psp": 32599,
+          "quantity": 1,
+          "ram": "12 GB",
+          "disksize": "256 GB"
+        }
+      ],
+      "totalAmount": 32599,
+      "orderDate": "2025-01-13T11:16:31.789Z"
+    },
+    {
+      "id": "1e34",
+      "customer": {
+        "name": "Aman Aman",
+        "contactNo": "9999999999",
+        "email": "user5@gmail.com",
+        "address": "dsfsd",
+        "billingAddress": "fsdf"
+      },
+      "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
+      "items": [
+        {
+          "pname": "Vivo 2310 Y17S 4/128 GB Forest Green",
+          "psp": 10199,
+          "quantity": 1,
+          "ram": "4 GB",
+          "disksize": "128 GB"
+        }
+      ],
+      "totalAmount": 10199,
+      "orderDate": "2025-01-13T11:16:55.853Z"
+    },
+    {
+      "id": "ab1e",
+      "customer": {
+        "name": "Aman Aman",
+        "contactNo": "9999999999",
+        "email": "user5@gmail.com",
+        "address": "dsf",
+        "billingAddress": "fsdff"
+      },
+      "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
+      "items": [
+        {
+          "pname": "Oppo 2565 A78 4G 8/128 GB Mist Black",
+          "psp": 15099,
+          "quantity": 1,
+          "ram": "8 GB",
+          "disksize": "128 GB"
+        }
+      ],
+      "totalAmount": 15099,
+      "orderDate": "2025-01-13T11:17:15.384Z"
+    },
+    {
+      "id": "324f",
+      "customer": {
+        "name": "Aman Aman",
+        "contactNo": "9999999999",
+        "email": "user5@gmail.com",
+        "address": "sfdf",
+        "billingAddress": "sdff"
+      },
+      "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
+      "items": [
+        {
+          "pname": "Samsung A065 A06 4/128 GB Gold",
+          "psp": 11099,
+          "quantity": 1,
+          "ram": "4 GB",
+          "disksize": "128 GB"
+        }
+      ],
+      "totalAmount": 11099,
+      "orderDate": "2025-01-13T11:17:28.437Z"
+    },
+    {
+      "id": "fc62",
+      "customer": {
+        "name": "Aman Aman",
+        "contactNo": "9999999999",
+        "email": "user5@gmail.com",
+        "address": "sfd",
+        "billingAddress": "sf"
+      },
+      "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
+      "items": [
+        {
+          "pname": "Redmi 13C 5G 6/128 Startrail Green",
+          "psp": 10799,
+          "quantity": 1,
+          "ram": "6 GB",
+          "disksize": "128 GB"
+        }
+      ],
+      "totalAmount": 10799,
+      "orderDate": "2025-01-13T11:17:42.785Z"
+    }
+  ],
+  "cart": [
+    {
+      "id": "16134257-10b4-43d7-8de0-a912b72d6660",
+      "pname": "Oneplus 12R 16/256 GB Iron Gray",
+      "brand": "OnePlus",
+      "description": "1.    16 GB RAM | 256 GB ROM\n2.    17.22 cm (6.78 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
+      "color": "Iron Gray",
+      "disksize": "256 GB",
+      "ram": "16 GB",
+      "psp": 45799,
+      "pop": 45999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494772/uploads/ydocvhkpksrcx0qssq9o.webp"
+    }
+  ],
+  "compare": [
+    {
+      "id": "79620719-7867-4a67-a994-c11e42352425",
+      "pname": "Oneplus Nord 4 8/128 GB Oasis Green",
+      "brand": "OnePlus",
+      "description": "1.    8 GB RAM | 128 GB ROM\n2.    17.12 cm (6.74 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
+      "color": "Oasis Green",
+      "disksize": "128 GB",
+      "ram": "8 GB",
+      "psp": 27599,
+      "pop": 27999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494907/uploads/piru823ywbdo1mfcatpi.webp"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "a50e6973-e22e-491c-8d54-23c0bcc6063d",
+      "pname": "Oneplus 12 16/512 GB Flowy Emerald",
+      "brand": "OnePlus",
+      "description": "1.    16 GB RAM | 512 GB ROM\n2.    17.32 cm (6.82 inch) Display\n3.    64MP Rear Camera\n4.    5400 mAh Battery",
+      "color": "Flowy Emerald",
+      "disksize": "512 GB",
+      "ram": "12 GB",
+      "psp": 69799,
+      "pop": 69999,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494567/uploads/ho3t9mv86m8ptzxgmgth.webp"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "4042",
+      "email": "ddhhd1@gmail.com"
+    },
+    {
+      "id": "b7fc",
+      "email": "ffd1@gmail.com"
+    },
+    {
+      "id": "4042",
+      "email": "ddhhd1@gmail.com"
+    },
+    {
+      "id": "b7fc",
+      "email": "ffd1@gmail.com"
+    },
+    {
+      "id": "4042",
+      "email": "ddhhd1@gmail.com"
+    },
+    {
+      "id": "b7fc",
+      "email": "om@gmail.com"
+    },
+    {
+      "id": "b7fc",
+      "email": "Anand@gmail.com"
+    },
+    {
+      "id": "bb46",
+      "email": "local1@gmail.com"
+    }
+  ]
+}

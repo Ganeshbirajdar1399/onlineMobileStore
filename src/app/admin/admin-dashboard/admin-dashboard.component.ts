@@ -42,6 +42,11 @@ export class AdminDashboardComponent {
   isEditing = false;
   editingProductId: string | null = null;
 
+  //dialog
+  isDialogOpen: boolean = false;
+  dialogMessage: string = '';
+  subscriberIdToDelete: string = ''; // Store the subscriber ID to be deleted
+
   constructor(
     private getProducts: GetProductService,
     private fb: FormBuilder,
@@ -78,33 +83,57 @@ export class AdminDashboardComponent {
     });
   }
 
+  // Method to trigger the confirmation dialog for deletion
   deleteProduct(id: string): void {
-    this.toastr
-      .info(
-        'Are you sure you want to delete this product?',
-        'Confirm Deletion',
-        {
-          closeButton: true,
-          progressBar: true,
-          tapToDismiss: true,
-          positionClass: 'toast-top-center',
-          timeOut: 0,
-          extendedTimeOut: 0,
-        }
-      )
-      .onTap.pipe()
-      .subscribe({
-        next: () => {
-          this.getProducts.deleteData(id).subscribe(() => {
-            this.toastr.success('Product removed successfully!', 'Success');
-            this.fetchProducts();
-          });
-        },
-        error: () => {
-          this.toastr.info('Product deletion canceled', 'Info');
-        },
-      });
+    this.subscriberIdToDelete = id; // Store the ID for later use
+    this.dialogMessage = 'Are you sure you want to delete this product?';
+    this.isDialogOpen = true;
   }
+
+  // Handle the user response
+  handleConfirmation(confirmed: boolean): void {
+    this.isDialogOpen = false;
+
+    if (confirmed) {
+      this.getProducts.deleteProduct(this.subscriberIdToDelete).subscribe(
+        () => {
+          this.toastr.success('Product removed successfully!', 'Success');
+          this.fetchProducts();
+        },
+        () => this.toastr.error('Failed to remove Product.', 'Error')
+      );
+    } else {
+      this.toastr.info('Product deletion canceled', 'Info');
+    }
+  }
+
+  // deleteProduct(id: string): void {
+  //   this.toastr
+  //     .info(
+  //       'Are you sure you want to delete this product?',
+  //       'Confirm Deletion',
+  //       {
+  //         closeButton: true,
+  //         progressBar: true,
+  //         tapToDismiss: true,
+  //         positionClass: 'toast-top-center',
+  //         timeOut: 0,
+  //         extendedTimeOut: 0,
+  //       }
+  //     )
+  //     .onTap.pipe()
+  //     .subscribe({
+  //       next: () => {
+  //         this.getProducts.deleteProduct(id).subscribe(() => {
+  //           this.toastr.success('Product removed successfully!', 'Success');
+  //           this.fetchProducts();
+  //         });
+  //       },
+  //       error: () => {
+  //         this.toastr.info('Product deletion canceled', 'Info');
+  //       },
+  //     });
+  // }
 
   editProduct(product: any): void {
     this.isEditing = true;

@@ -137,13 +137,25 @@
               </div>
             </div>
             <div class="d-flex justify-content-center align-content-center">
-              <button
-                type="submit"
-                [disabled]="!myForm.valid || !imageUrl"
-                class="btn btn-primary"
-              >
-                Add Product
-              </button>
+              <ng-container *ngIf="isEditing; else elseTemplate">
+                <button
+                  type="submit"
+                  [disabled]="!myForm.valid || !imageUrl"
+                  class="btn btn-primary"
+                >
+                  Update Product
+                </button>
+              </ng-container>
+              <ng-template #elseTemplate>
+                <button
+                  type="submit"
+                  [disabled]="!myForm.valid || !imageUrl"
+                  class="btn btn-primary"
+                >
+                  Add Product
+                </button>
+              </ng-template>
+
               <!-- <div *ngIf="!myForm.valid">
                 <p>Form is invalid</p>
               </div>
@@ -302,6 +314,18 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="dialog-overlay" *ngIf="isDialogOpen">
+  <div class="dialog-box">
+    <h3>Confirmation</h3>
+    <p>{{ dialogMessage }}</p>
+    <div class="dialog-actions">
+      <button (click)="handleConfirmation(false)" class="cancel-btn">No</button>
+      <button (click)="handleConfirmation(true)" class="confirm-btn">
+        Yes
+      </button>
     </div>
   </div>
 </div>

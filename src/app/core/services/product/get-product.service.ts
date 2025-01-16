@@ -59,7 +59,7 @@ export class GetProductService {
   }
 
   // Delete product
-  deleteData(id: string): Observable<Product> {
+  deleteProduct(id: string): Observable<Product> {
     return this.http.delete<Product>(`${this.productsUrl}/${id}`);
   }
 

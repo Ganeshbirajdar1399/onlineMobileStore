@@ -2,6 +2,18 @@
   <h1>Admin Page</h1>
   <button (click)="logout()">Logout</button>
 </div> -->
+<div class="dialog-overlay" *ngIf="isDialogOpen">
+  <div class="dialog-box">
+    <h3>Confirmation</h3>
+    <p>{{ dialogMessage }}</p>
+    <div class="dialog-actions">
+      <button (click)="handleConfirmation(false)" class="cancel-btn">No</button>
+      <button (click)="handleConfirmation(true)" class="confirm-btn">
+        Yes
+      </button>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <h2>All Customers</h2>
