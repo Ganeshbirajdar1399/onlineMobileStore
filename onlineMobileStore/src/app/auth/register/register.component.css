@@ -1,0 +1,92 @@
+.register-card {
+  margin-top: 50px;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.register-card .card-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.register-card .form-label {
+  font-weight: 500;
+}
+
+.register-card .btn {
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.register-card .alert {
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.register-card .card-footer a {
+  text-decoration: none;
+}
+
+.register-card .card-footer a:hover {
+  text-decoration: underline;
+}
+
+/*toggle password*/
+/* .toggle-password {
+  position: absolute;
+  top: 43.5%;
+  right: 35px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: #495057;
+} */
+.password-container {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding-right: 50px;
+  }
+
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: -05px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #6c757d;
+    cursor: pointer;
+
+    &:hover {
+      color: #495057;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .password-container {
+    input {
+      font-size: 1rem;
+    }
+
+    .toggle-password {
+      font-size: 1rem;
+      right: 8px;
+    }
+  }
+}

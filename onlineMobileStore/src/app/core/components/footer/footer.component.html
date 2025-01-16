@@ -1,0 +1,102 @@
+<footer class="text-light py-5 footer">
+  <div class="container">
+    <div class="row">
+      <!-- About Us Section -->
+      <div class="col-md-3">
+        <h5 class="fw-bold">
+          <a class="navbar-brand" routerLink="">
+            <span class="text-warning">Mobile</span>
+            <span class="text-light ms-1">Shop</span>
+            <!-- <span class="text-warning">Shopee</span> -->
+          </a>
+        </h5>
+        <p *ngIf="webdatas.length > 0">
+          {{ webdatas[0].about }}
+        </p>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="col-md-3">
+        <h5 class="text-uppercase fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <!-- <li class="nav-item">
+            <button class="nav-link" routerLink="/">Home</button>
+          </li> -->
+          <li class="nav-item" *ngFor="let brand of getBrands()">
+            <button class="nav-link" (click)="navigateToBrand(brand)">
+              {{ brand | titlecase }}
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Us Section -->
+      <div class="col-md-3">
+        <h5 class="text-uppercase fw-bold">Contact Us</h5>
+        <p *ngIf="webdatas.length > 0">
+          <i class="bi bi-geo-alt-fill me-2"></i>{{ webdatas[0].location }}
+        </p>
+        <p *ngIf="webdatas.length > 0">
+          <i class="bi bi-telephone-fill me-2"></i>{{ webdatas[0].contactNo }}
+        </p>
+        <p *ngIf="webdatas.length > 0">
+          <i class="bi bi-envelope-fill me-2"></i>{{ webdatas[0].email }}
+        </p>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="col-md-3">
+        <h5 class="text-uppercase fw-bold">Connect with us</h5>
+        <p>Subscribe to receive updates on new arrivals and special offers.</p>
+        <form class="d-flex" [formGroup]="myForm" (ngSubmit)="postSubscribe()">
+          <input
+            type="email"
+            class="form-control me-2"
+            formControlName="email"
+            placeholder="Your email"
+          />
+          <button class="btn btn-warning" type="submit">Subscribe</button>
+        </form>
+        <div class="mt-3">
+          <!-- Social Media Icons -->
+          <a
+            *ngIf="webdatas.length > 0"
+            [href]="webdatas[0].facebook"
+            target="_blank"
+            class="text-light me-3"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            *ngIf="webdatas.length > 0"
+            [href]="webdatas[0].twitter"
+            target="_blank"
+            class="text-light me-3"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a
+            *ngIf="webdatas.length > 0"
+            [href]="webdatas[0].instagram"
+            target="_blank"
+            class="text-light me-3"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a
+            *ngIf="webdatas.length > 0"
+            [href]="webdatas[0].youtube"
+            target="_blank"
+            class="text-light"
+            ><i class="bi bi-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-light" />
+    <div class="text-center">
+      <p class="mb-0" *ngIf="webdatas.length > 0">
+        {{ webdatas[0].cc }}
+        <!-- © 2024 <span class="text-light">Mobile</span
+        ><span class="text-warning">Shopee</span>. All Rights Reserved. -->
+      </p>
+    </div>
+  </div>
+</footer>

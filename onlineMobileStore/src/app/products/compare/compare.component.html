@@ -1,0 +1,107 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4" style="color: #6f42c1">Compare Products</h2>
+
+  <!-- Table view for larger screens -->
+  <div class="table-responsive d-none d-md-block">
+    <table class="table table-bordered table-hover shadow-sm">
+      <thead class="table-primary text-center">
+        <tr>
+          <th>Parameters</th>
+          <th *ngFor="let product of compareItems">{{ product.pname }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fw-bold">Image</td>
+          <td *ngFor="let product of compareItems" class="text-center">
+            <img
+              [src]="product.image"
+              alt="{{ product.pname }}"
+              class="product-image"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="fw-bold">Brand</td>
+          <td *ngFor="let product of compareItems" class="text-center">
+            {{ product.brand }}
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Color</td>
+          <td *ngFor="let product of compareItems" class="text-center">
+            {{ product.color }}
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Storage</td>
+          <td *ngFor="let product of compareItems" class="text-center">
+            {{ product.disksize }}
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Ram Size</td>
+          <td *ngFor="let product of compareItems" class="text-center">
+            {{ product.ram }}
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Price</td>
+          <td *ngFor="let product of compareItems" class="text-center">
+            {{ product.psp | currency : "INR" }}
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Description</td>
+          <td *ngFor="let product of compareItems" class="text-muted small">
+            {{ product.description }}
+          </td>
+        </tr>
+        <!-- Add more rows for additional attributes as needed -->
+        <tr>
+          <td class="fw-bold text-danger">Actions</td>
+          <td *ngFor="let product of compareItems" class="text-center">
+            <button
+              (click)="removeFromCompare(product.id)"
+              class="btn btn-outline-danger btn-sm"
+              title="Remove from compare"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex justify-content-center align-content-center my-2">
+    <button class="btn btn-danger" (click)="clearComparison()">
+      Delete All
+    </button>
+  </div>
+
+  <!-- Card view for smaller screens -->
+  <div class="d-block d-md-none">
+    <div *ngFor="let product of compareItems" class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.pname }}</h5>
+        <p class="text-success fw-bold">
+          Price: {{ product.psp | currency : "INR" }}
+        </p>
+        <p class="text-muted small">{{ product.description }}</p>
+        <button
+          (click)="removeFromCompare(product.id)"
+          class="btn btn-outline-danger btn-sm"
+          title="Remove from compare"
+        >
+          <i class="bi bi-trash"></i> Remove
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message for empty compare list -->
+  <div *ngIf="compareItems.length === 0" class="text-center text-muted">
+    <p>No products in the compare list.</p>
+  </div>
+</div>

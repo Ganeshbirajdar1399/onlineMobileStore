@@ -1,0 +1,7 @@
+<div #result class="result"></div>
+<div class="image-container" (mousemove)="moveLens($event)" (mouseleave)="hideLens()">
+    <img #productImage [src]="image" alt="Product Image" class="zoom-image" />
+    <div #lens class="lens"></div>
+  </div>
+  
+  

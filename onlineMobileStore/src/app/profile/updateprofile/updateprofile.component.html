@@ -1,0 +1,203 @@
+<div class="form-container">
+  <div class="card">
+    <div class="card-header">Update Admin Details</div>
+    <form (ngSubmit)="updateUserDetails()">
+      <div class="card-body">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-md-6">
+            <!-- First Name -->
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                #firstname="ngModel"
+                class="form-control"
+                [(ngModel)]="adminDetails.firstName"
+                name="firstName"
+                required
+                minlength="2"
+              />
+              <small
+                class="text-danger"
+                *ngIf="firstname.touched && firstname.errors?.['required']"
+              >
+                First Name is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="firstname.touched && firstname.errors?.['minlength']"
+              >
+                First Name must be at least 2 characters long.
+              </small>
+            </div>
+            <!-- Last Name -->
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                #lastname="ngModel"
+                class="form-control"
+                [(ngModel)]="adminDetails.lastName"
+                name="lastName"
+                required
+                minlength="2"
+              />
+              <small
+                class="text-danger"
+                *ngIf="lastname.touched && lastname.errors?.['required']"
+              >
+                Last Name is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="lastname.touched && lastname.errors?.['minlength']"
+              >
+                Last Name must be at least 2 characters long.
+              </small>
+            </div>
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                #email="ngModel"
+                class="form-control"
+                [(ngModel)]="adminDetails.email"
+                name="email"
+                required
+                email
+              />
+              <small
+                class="text-danger"
+                *ngIf="email.touched && email.errors?.['required']"
+              >
+                Email is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="email.touched && email.errors?.['email']"
+              >
+                Invalid email format.
+              </small>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <!-- Mobile Number -->
+            <div class="mb-3">
+              <label for="mobile" class="form-label">Mobile No</label>
+              <input
+                type="text"
+                id="mobile"
+                #mobile="ngModel"
+                class="form-control"
+                [(ngModel)]="adminDetails.mobile"
+                name="mobile"
+                required
+                pattern="^[0-9]{10}$"
+              />
+              <small
+                class="text-danger"
+                *ngIf="mobile.touched && mobile.errors?.['required']"
+              >
+                Mobile number is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="mobile.touched && mobile.errors?.['pattern']"
+              >
+                Enter a valid 10-digit mobile number.
+              </small>
+            </div>
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="password-container position-relative">
+                <input
+                  type="{{ hide ? 'password' : 'text' }}"
+                  class="form-control"
+                  placeholder="Enter your password"
+                  [(ngModel)]="adminDetails.password"
+                  id="password"
+                  #password="ngModel"
+                  name="password"
+                  required
+                  minlength="8"
+                  pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                />
+                <button
+                  type="button"
+                  class="btn toggle-password position-absolute"
+                  (click)="toggleHide()"
+                  aria-label="Toggle password visibility"
+                >
+                  <i
+                    class="fas"
+                    [ngClass]="hide ? 'fa-eye-slash' : 'fa-eye'"
+                  ></i>
+                </button>
+              </div>
+
+              <small
+                class="text-danger"
+                *ngIf="password.touched && password.errors?.['required']"
+              >
+                Password is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="password.touched && password.errors?.['minlength']"
+              >
+                Password must be at least 8 characters long.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="password.touched && password.errors?.['pattern']"
+              >
+                Password must include uppercase, lowercase, number, and special
+                character.
+              </small>
+            </div>
+            <!-- Address -->
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <input
+                type="text"
+                id="address"
+                #address="ngModel"
+                class="form-control"
+                [(ngModel)]="adminDetails.address"
+                name="address"
+                required
+                minlength="5"
+              />
+              <small
+                class="text-danger"
+                *ngIf="address.touched && address.errors?.['required']"
+              >
+                Address is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="address.touched && address.errors?.['minlength']"
+              >
+                Address must be at least 5 characters long.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer d-flex justify-content-center mb-3">
+        <button type="button" class="btn btn-warning" routerLink="/profile">
+          Back
+        </button>
+        <button type="submit" class="btn btn-primary ms-2">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>

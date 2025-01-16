@@ -1,0 +1,238 @@
+.main-card {
+  margin: 2rem auto;
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* .card-body {
+  padding: 2rem;
+} */
+
+.product-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #e8e8e8;
+}
+
+/* .row {
+  gap: 1rem;
+} */
+
+.brand-card {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #e8e8e8;
+}
+
+/* Unique Colors for Each Brand */
+.brand-card-0 {
+  background-color: #fff;
+  /* Light Pink */
+}
+
+.brand-card-1 {
+  background-color: #fff;
+  /* Light Blue */
+}
+
+.brand-card-2 {
+  background-color: #fff;
+  /* Light Green */
+}
+
+.brand-card-3 {
+  background-color: #fff;
+  /* Light Yellow */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Add a semi-transparent background */
+  border-radius: 50%;
+  /* Make the buttons circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  /* Ensure the buttons appear above other elements */
+  cursor: pointer;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #6f42c1;
+  /* Darken background on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  /* Ensure the icon covers the entire button */
+}
+
+.carousel-control-prev {
+  left: 10px;
+  /* Position the button on the left */
+}
+
+.carousel-control-next {
+  right: 10px;
+  /* Position the button on the right */
+}
+
+
+
+
+
+/* Icon positioning and visibility */
+.product-hover-icons {
+  position: absolute;
+  top: 08%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  display: none;
+  /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-hover-icons {
+  display: flex;
+  /* Display icons when hovering */
+  opacity: 1;
+}
+
+.icon-btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 06px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+.wishlist-btn {
+  background-color: #f04e23;
+  /* Orange color for Wishlist */
+}
+
+.compare-btn {
+  background-color: #00aaff;
+  /* Blue color for Compare */
+}
+
+/* Optional: Add a shadow effect when hovering */
+.product-card:hover .icon-btn {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

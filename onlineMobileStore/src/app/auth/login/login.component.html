@@ -1,0 +1,120 @@
+<div class="container d-flex justify-content-center">
+  <div class="card shadow-lg p-4 login-card">
+    <div
+      class="card-header text-center text-white"
+      style="background-color: #6f42c1"
+    >
+      <h4>Login Here!</h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="myForm" (ngSubmit)="onLogin()">
+        <!-- Email Input -->
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="Enter your email"
+          />
+          <div
+            *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
+            class="text-danger mt-1"
+          >
+            <small *ngIf="myForm.get('email')?.errors?.['required']">
+              Email is required.
+            </small>
+            <small *ngIf="myForm.get('email')?.errors?.['email']">
+              Invalid email format.
+            </small>
+            <small *ngIf="myForm.get('email')?.errors?.['pattern']">
+              Please enter a valid email address.
+            </small>
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="mb-3 position-relative">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            [type]="hide ? 'password' : 'text'"
+            class="form-control"
+            formControlName="password"
+            placeholder="Enter your password"
+          />
+          <button
+            type="button"
+            class="btn toggle-password position-absolute"
+            (click)="toggleHide()"
+            aria-label="Toggle password visibility"
+          >
+            <i class="fas" [ngClass]="hide ? 'fa-eye-slash' : 'fa-eye'"></i>
+          </button>
+          <div
+            *ngIf="
+              myForm.get('password')?.invalid && myForm.get('password')?.touched
+            "
+            class="text-danger mt-1"
+          >
+            <small *ngIf="myForm.get('password')?.errors?.['required']">
+              Password is required.
+            </small>
+            <small *ngIf="myForm.get('password')?.errors?.['minlength']">
+              Password must be at least 8 characters long.
+            </small>
+            <small *ngIf="myForm.get('password')?.errors?.['pattern']">
+              Password must include uppercase, lowercase, number, and special
+              character.
+            </small>
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <!-- <div
+          *ngIf="error"
+          class="error-message"
+          style="
+            color: red;
+            border: 1px solid blue;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+          "
+        >
+          {{ error }}
+        </div> -->
+        <!-- Login Button -->
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="myForm.invalid"
+        >
+          Log In
+        </button>
+      </form>
+    </div>
+
+    <div
+      *ngIf=""
+      class="error-message"
+      style="
+        color: red;
+        border: 1px solid blue;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      "
+    >
+      Invalid email or password. Please try again.
+    </div>
+
+    <div class="card-footer text-center">
+      <p>
+        Don't have an account?
+        <a class="text-primary fw-bold" routerLink="/register">Sign Up</a>
+      </p>
+    </div>
+  </div>
+</div>

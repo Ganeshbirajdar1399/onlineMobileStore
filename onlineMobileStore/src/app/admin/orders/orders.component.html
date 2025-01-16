@@ -1,0 +1,143 @@
+<div class="container">
+  <h2>All Orders</h2>
+
+  <div class="d-flex justify-content-between d-none d-md-block">
+    <div class="w-auto">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Product with Customer Name/Address"
+        [(ngModel)]="searchText"
+      />
+    </div>
+    <div class="w-auto mt-2">
+      <select class="form-select form-select-sm" [(ngModel)]="itemsPerPage">
+        <option
+          selected
+          class="text-primary"
+          *ngFor="let count of [10, 20, 30]"
+          [value]="count"
+        >
+          {{ count }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container table-responsive d-none d-md-block">
+    <table class="product-table table-bordered">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer Name</th>
+          <th>Email</th>
+          <th>Contact No.</th>
+          <th>Shipping Address</th>
+          <th>Billing Address</th>
+          <th>Order Date</th>
+          <th>Total Amount</th>
+          <th>Items</th>
+          <th *ngIf="isAdmin">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let order of filteredOrders
+              | paginate : { itemsPerPage: itemsPerPage, currentPage: page }
+              | searchOrder
+                : searchText
+                : 'customer.address'
+                : 'totalAmount'
+                : 'items';
+            let i = index
+          "
+        >
+          <!-- Display only if order.userId matches logged-in user's ID -->
+          <td>{{ order.id }}</td>
+          <td>{{ order.customer.name }}</td>
+          <td>{{ order.customer.email }}</td>
+          <td>{{ order.customer.contactNo }}</td>
+          <td>{{ order.customer.address }}</td>
+          <td>{{ order.customer.billingAddress }}</td>
+          <td>{{ order.orderDate | date : "short" }}</td>
+          <td>{{ order.totalAmount | currency : "INR" }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let item of order.items">
+                {{ item.pname }} ({{ item.ram }}, {{ item.disksize }}) x
+                {{ item.quantity }} - {{ item.psp | currency : "INR" }}
+              </li>
+            </ul>
+          </td>
+          <td *ngIf="order.userId === loggedInUser?.id">
+            <div class="d-flex justify-content-between">
+              <!-- Delete button is visible only for admins -->
+              <button
+                class="btn btn-sm btn-danger ms-2"
+                (click)="deleteOrders(order.id)"
+              >
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </div>
+
+  <!-- Mobile-friendly cards for small screens -->
+  <div class="product-cards d-block d-md-none">
+    <div class="card" *ngFor="let order of allOrders">
+      <div class="card-body">
+        <!-- Display order only if userId matches logged-in user -->
+        <div>
+          <h5 class="card-title">Customer Name: {{ order.customer.name }}</h5>
+          <p class="card-text">
+            <strong>Customer Number:</strong> {{ order.customer.contactNo }}
+          </p>
+          <p class="card-text">
+            <strong>Customer Email:</strong> {{ order.customer.email }}
+          </p>
+          <p class="card-text">
+            <strong>Order Date: </strong> {{ order.orderDate | date : "short" }}
+          </p>
+          <p class="card-text">
+            <strong>Order Amount: </strong>
+            {{ order.totalAmount | currency : "INR" }}
+          </p>
+
+          <p class="card-text">
+            <strong>Shipping Address: </strong> {{ order.customer.address }}
+          </p>
+          <p class="card-text">
+            <strong>Billing Address: </strong>
+            {{ order.customer.billingAddress }}
+          </p>
+
+          <!-- Loop through items in the order -->
+          <ul>
+            <li *ngFor="let item of order.items">
+              {{ item.pname }} ({{ item.ram }}, {{ item.disksize }}) x
+              {{ item.quantity }} - {{ item.psp | currency : "INR" }}
+            </li>
+          </ul>
+
+          <!-- Display delete button only for admin -->
+          <div class="d-flex justify-content-center">
+            <button
+              class="btn btn-sm btn-danger ms-2"
+              *ngIf="loggedInUser?.role === 'admin'"
+              (click)="deleteOrders(order.id)"
+            >
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

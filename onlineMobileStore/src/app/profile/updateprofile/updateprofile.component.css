@@ -1,0 +1,136 @@
+/* toggle password*/
+.password-container {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding-right: 50px;
+  }
+
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: -05px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #6c757d;
+    cursor: pointer;
+
+    &:hover {
+      color: #495057;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .password-container {
+    input {
+      font-size: 1rem;
+    }
+
+    .toggle-password {
+      font-size: 1rem;
+      right: 8px;
+    }
+  }
+}
+
+
+/* General styles for the form container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  /* Light grey background */
+  padding: 20px;
+}
+
+/* Card styling */
+.card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card header styling */
+.card-header {
+  background-color: #6f42c1;
+  /* Bootstrap primary color */
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Card body styling */
+.card-body {
+  padding: 20px;
+}
+
+.card-body .form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.card-body .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.card-body .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+.footer .btn {
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* .footer .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  } */
+
+.footer .btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.footer .btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .card {
+    margin: 20px;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+}

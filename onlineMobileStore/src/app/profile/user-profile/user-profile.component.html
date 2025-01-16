@@ -1,0 +1,373 @@
+<div class="container" style="margin-top: 100px; margin-bottom: 20px">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <div class="card border-0 shadow-lg rounded-4">
+        <div class="card-header text-center text-white rounded-top-4">
+          <h3 class="mb-0">{{ loggedInUser?.role | titlecase }} Profile</h3>
+        </div>
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <img
+              src="profile/skeleton-6639547_640.png"
+              alt="Profile Picture"
+              class="rounded-circle border"
+              width="100"
+              height="100"
+            />
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>First Name:</strong> {{ loggedInUser?.firstName }}
+            </li>
+            <li class="list-group-item">
+              <strong>Last Name:</strong> {{ loggedInUser?.lastName }}
+            </li>
+            <li class="list-group-item">
+              <strong>Email:</strong> {{ loggedInUser?.email }}
+            </li>
+            <li class="list-group-item">
+              <strong>Role:</strong> {{ loggedInUser?.role | titlecase }}
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="isAdmin" class="card-footer bg-light text-center">
+          <h5 class="text-primary">Admin Section</h5>
+          <p class="mb-0 text-muted">
+            Welcome, Admin! Here are your tools and privileges.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center pb-3">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#add"
+            *ngIf="loggedInUser?.role === 'admin'"
+          >
+            <i class="bi bi-person-plus-fill"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-success ms-2"
+            routerLink="/updateuserprofile"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-warning ms-2"
+            data-bs-toggle="modal"
+            data-bs-target="#seeusers"
+            *ngIf="loggedInUser?.role === 'admin'"
+          >
+            <i class="bi bi-eye"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="add"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Admin</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+          <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6">
+              <!-- First Name -->
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  #firstname="ngModel"
+                  class="form-control"
+                  placeholder="Enter your firstname"
+                  [(ngModel)]="users.firstName"
+                  name="firstName"
+                  required
+                  minlength="2"
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="firstname.touched && firstname.errors?.['required']"
+                >
+                  First Name is required.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="firstname.touched && firstname.errors?.['minlength']"
+                >
+                  First Name must be at least 2 characters long.
+                </small>
+              </div>
+              <!-- Last Name -->
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  #lastname="ngModel"
+                  class="form-control"
+                  placeholder="Enter your lastname"
+                  [(ngModel)]="users.lastName"
+                  name="lastName"
+                  required
+                  minlength="2"
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="lastname.touched && lastname.errors?.['required']"
+                >
+                  Last Name is required.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="lastname.touched && lastname.errors?.['minlength']"
+                >
+                  Last Name must be at least 2 characters long.
+                </small>
+              </div>
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  #email="ngModel"
+                  class="form-control"
+                  placeholder="Enter your email address"
+                  [(ngModel)]="users.email"
+                  name="email"
+                  required
+                  email
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="email.touched && email.errors?.['required']"
+                >
+                  Email is required.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="email.touched && email.errors?.['email']"
+                >
+                  Invalid email format.
+                </small>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6">
+              <!-- Mobile Number -->
+              <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile No</label>
+                <input
+                  type="text"
+                  id="mobile"
+                  #mobile="ngModel"
+                  class="form-control"
+                  placeholder="Enter your mobile no"
+                  [(ngModel)]="users.mobile"
+                  name="mobile"
+                  required
+                  pattern="^[0-9]{10}$"
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="mobile.touched && mobile.errors?.['required']"
+                >
+                  Mobile number is required.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="mobile.touched && mobile.errors?.['pattern']"
+                >
+                  Enter a valid 10-digit mobile number.
+                </small>
+              </div>
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-container position-relative">
+                  <input
+                    type="{{ hide ? 'password' : 'text' }}"
+                    class="form-control"
+                    placeholder="Enter your password"
+                    [(ngModel)]="users.password"
+                    id="password"
+                    #password="ngModel"
+                    name="password"
+                    required
+                    minlength="8"
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                  />
+                  <button
+                    type="button"
+                    class="btn toggle-password position-absolute"
+                    (click)="toggleHide()"
+                    aria-label="Toggle password visibility"
+                  >
+                    <i
+                      class="fas"
+                      [ngClass]="hide ? 'fa-eye-slash' : 'fa-eye'"
+                    ></i>
+                  </button>
+                </div>
+
+                <small
+                  class="text-danger"
+                  *ngIf="password.touched && password.errors?.['required']"
+                >
+                  Password is required.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="password.touched && password.errors?.['minlength']"
+                >
+                  Password must be at least 8 characters long.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="password.touched && password.errors?.['pattern']"
+                >
+                  Password must include uppercase, lowercase, number, and
+                  special character.
+                </small>
+              </div>
+              <!-- Address -->
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  #address="ngModel"
+                  class="form-control"
+                  placeholder="Enter your address"
+                  [(ngModel)]="users.address"
+                  name="address"
+                  required
+                  minlength="5"
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="address.touched && address.errors?.['required']"
+                >
+                  Address is required.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="address.touched && address.errors?.['minlength']"
+                >
+                  Address must be at least 5 characters long.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="btn btn-primary w-100"
+            [disabled]="!registrationForm.valid"
+          >
+            Add
+          </button>
+
+          <!-- Success Message -->
+          <div
+            *ngIf="isRegister"
+            class="alert alert-success d-flex align-items-center mt-3"
+            role="alert"
+          >
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <div>Added Successfully!</div>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="seeusers"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Admin Users</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <!-- <th scope="col">Sr.No.</th> -->
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <!-- <th scope="col">Email Address</th>
+              <th scope="col">Mobile No.</th> -->
+              <th scope="col">Role</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let users of usersData; let i = index">
+              <tr *ngIf="loggedInUser?.role === users.role">
+                <!-- <td>{{i + 1}}</td> -->
+                <td>{{ users.firstName }}</td>
+                <td>{{ users.lastName }}</td>
+                <!-- <td>{{ users.email }}</td>
+                <td>{{ users.mobile }}</td> -->
+                <td>{{ users.role }}</td>
+                <td>
+                  <button class="btn btn-danger" (click)="deleteUser(users.id)">
+                    <i class="bi bi-trash-fill"></i>
+                  </button>
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

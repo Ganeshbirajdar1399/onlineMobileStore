@@ -1,0 +1,74 @@
+<div class="container-fluid my-5">
+  <h2 class="text-center mb-4 animated-title">Product Specifications</h2>
+
+  <!-- Product Card -->
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <div class="card shadow-lg product-card animate-fade">
+        <div class="row g-0">
+          <!-- Product Image -->
+          <div class="col-md-6">
+            <img
+              [src]="product?.image"
+              class="img-fluid rounded-start"
+              alt="Product Name"
+              height="400px"
+              width="400px"
+            />
+            <!-- <app-magnifier [image]="product?.image"></app-magnifier> -->
+          </div>
+
+          <!-- Product Details -->
+          <div class="col-md-6">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title mb-3">{{ product?.pname }}</h4>
+              <h6 class="text-muted mb-3">
+                Brand: <span class="fw-bold">{{ product?.brand }}</span>
+              </h6>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item">
+                  Description:
+                  <span class="fw-bold">{{ product?.description }}</span>
+                </li>
+                <li class="list-group-item">
+                  Color: <span class="fw-bold">{{ product?.color }}</span>
+                </li>
+                <li class="list-group-item">
+                  Disk Size:
+                  <span class="fw-bold">{{ product?.disksize }}</span>
+                </li>
+                <li class="list-group-item">
+                  RAM: <span class="fw-bold">{{ product?.ram }}</span>
+                </li>
+                <li class="list-group-item">
+                  Price:
+                  <span class="text-primary fw-bold">
+                    {{ product?.psp | currency : "INR" }}</span
+                  >
+                  <small class="text-dark">
+                    <s>{{ product?.pop | currency : "INR" : "₹" }}</s>
+                  </small>
+                  <span
+                    *ngIf="
+                      product?.psp && product?.pop && product.pop > product.psp
+                    "
+                    class="badge rounded-pill bg-danger text-light ms-2"
+                  >
+                    {{ calculateDiscount(product.psp, product.pop) }}% OFF
+                  </span>
+                </li>
+              </ul>
+
+              <button
+                class="btn btn-primary btn-sm"
+                (click)="addToCart(product)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

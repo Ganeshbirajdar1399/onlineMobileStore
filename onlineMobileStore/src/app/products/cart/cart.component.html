@@ -1,0 +1,98 @@
+<div class="container mt-5">
+  <!-- Heading -->
+  <h2 class="mb-4 text-center" style="color: #6f42c1">Your Cart</h2>
+
+  <!-- Delete All Button -->
+  <div class="d-flex justify-content-end mb-3">
+    <button
+      class="btn btn-danger btn-sm"
+      (click)="clearCart()"
+      aria-label="Remove all items from the cart"
+      title="Clear all items from the cart"
+    >
+      <i class="fa fa-trash"></i> Delete All
+    </button>
+  </div>
+
+  <!-- Cart Items -->
+  <div class="row" *ngIf="cartItems.length > 0; else emptyCart">
+    <div class="col-12 mb-3" *ngFor="let item of cartItems">
+      <div class="card shadow-sm">
+        <div class="row g-0">
+          <!-- Product Image -->
+          <div
+            class="col-4 col-md-3 d-flex align-items-center justify-content-center"
+          >
+            <a [routerLink]="['/product', item.id]">
+              <img
+                [src]="item.image"
+                alt="{{ item.pname }}"
+                class="img-fluid rounded"
+                style="max-width: 100px; height: auto"
+              />
+            </a>
+          </div>
+
+          <!-- Product Details -->
+          <div class="col-8 col-md-9">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <a
+                  class="text-decoration-none"
+                  [routerLink]="['/product', item.id]"
+                  ><h5 class="card-title mb-1">{{ item.pname }}</h5></a
+                >
+                <button
+                  class="btn btn-danger btn-sm"
+                  (click)="removeItem(item.id)"
+                  aria-label="Remove item"
+                  title="Remove Item"
+                >
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+              <p class="text-muted mb-2">{{ item.psp | currency : "INR" }}</p>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <!-- Quantity -->
+                <div>
+                  <label class="form-label d-inline me-2 mb-0">Qty:</label>
+                  <input
+                    type="number"
+                    class="form-control d-inline"
+                    [(ngModel)]="item.quantity"
+                    (ngModelChange)="onQuantityChange(item)"
+                    min="1"
+                    style="width: 70px"
+                  />
+                </div>
+
+                <!-- Subtotal -->
+                <p class="mb-0 text-end">
+                  <strong>{{
+                    item.psp * item.quantity | currency : "INR"
+                  }}</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Total Display in Cart -->
+  <div class="d-flex justify-content-end align-items-center mt-3">
+    <h4>Total: {{ totalAmount | currency : "INR" }}</h4>
+  </div>
+
+  <div class="d-flex justify-content-end align-items-end mb-3">
+    <button class="btn btn-success" (click)="goToCheckout()">
+      Checkout <i class="bi bi-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- Empty Cart Message -->
+  <ng-template #emptyCart>
+    <div class="alert alert-warning text-center">Your cart is empty!</div>
+  </ng-template>
+</div>

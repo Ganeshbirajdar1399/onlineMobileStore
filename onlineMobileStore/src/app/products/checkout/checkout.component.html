@@ -1,0 +1,137 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Checkout</h2>
+
+  <div class="row">
+    <!-- Cart Items Section -->
+    <div class="col-12 col-md-6 mb-4">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Cart Items</h3>
+          <div
+            *ngFor="let item of cartItems"
+            class="product-card card shadow-sm mb-4"
+          >
+            <div class="row g-0">
+              <div class="col-4">
+                <img
+                  [src]="item.image"
+                  alt="{{ item.pname }}"
+                  class="img-fluid rounded-start product-img"
+                />
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.pname }}</h5>
+                  <p class="card-text text-muted">{{ item.brand }}</p>
+                  <p class="card-text">
+                    <small>{{ item.description }}</small>
+                  </p>
+                  <p class="card-text">
+                    <strong>{{ item.psp | currency : "INR" }}</strong> x
+                    {{ item.quantity }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3">
+            <h3>Total: {{ totalAmount | currency : "INR" }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Information Form Section -->
+    <div class="col-12 col-md-6">
+      <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Customer Information</h3>
+        <form #customerForm="ngForm">
+          <!-- Customer Name -->
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Customer Name</label>
+            <input
+              type="text"
+              id="customerName"
+              class="form-control"
+              [(ngModel)]="customer.name"
+              name="customerName"
+              required
+            />
+          </div>
+
+          <!-- Contact Number -->
+          <div class="mb-3">
+            <label for="contactNumber" class="form-label">Contact Number</label>
+            <input
+              type="tel"
+              id="contactNumber"
+              class="form-control"
+              [(ngModel)]="customer.contactNo"
+              name="contactNumber"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              [(ngModel)]="customer.email"
+              name="email"
+              required
+            />
+          </div>
+
+          <!-- Shipping Address -->
+          <div class="mb-3">
+            <label for="address" class="form-label">Shipping Address</label>
+            <textarea
+              id="address"
+              class="form-control"
+              rows="3"
+              [(ngModel)]="customer.address"
+              name="address"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Billing Address -->
+          <div class="mb-3">
+            <label for="billingAddress" class="form-label"
+              >Billing Address</label
+            >
+            <textarea
+              id="billingAddress"
+              class="form-control"
+              rows="3"
+              [(ngModel)]="customer.billingAddress"
+              name="billingAddress"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-flex justify-content-end mt-3">
+            <button
+              class="btn btn-primary"
+              (click)="placeOrder()"
+              [disabled]="!customerForm.valid"
+            >
+              Place Order <i class="bi bi-arrow-right-circle"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Buttons for Shopping -->
+  <div class="d-flex justify-content-between mt-3 mb-3">
+    <button class="btn btn-success" routerLink="">
+      <i class="bi bi-arrow-left-circle"></i> Continue Shopping
+    </button>
+  </div>
+</div>

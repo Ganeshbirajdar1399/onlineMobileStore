@@ -1,0 +1,104 @@
+.navbar {
+  position: fixed;
+  /* Fix to the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Ensure it stays on top of other elements */
+  background-color: #6f42c1;
+  color: white;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-button {
+  padding: 3px;
+  height: 36px;
+}
+
+.navbar-toggler {
+  border: none;
+  /* Remove border from toggler */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2810, 10, 10, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navbar-collapse {
+  background-color: #fff;
+  /* Matches navbar background */
+  z-index: 1050;
+  /* Ensures it stays on top */
+  padding: 1rem;
+}
+
+/* Links and Search Bar */
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  /* Smaller font for compact view */
+  margin-bottom: 0.5rem;
+  text-align: center;
+  /* Center links for mobile */
+}
+
+.search-input {
+  width: 100%;
+  /* Full-width input on mobile */
+  margin-bottom: 0.5rem;
+  /* Spacing below the search bar */
+}
+
+/* Icon Section */
+.icon-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.icon-btn:hover {
+  color: #6f42c1;
+  /* Matches the warning color theme */
+}
+
+.icon-btn .badge {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    /* Push below navbar */
+    left: 0;
+    width: 100%;
+    /* Full width */
+    border-top: 1px solid #e9ecef;
+    /* Separator line */
+  }
+
+  .d-flex.justify-content-end {
+    flex-direction: column;
+    /* Stack icons vertically */
+    align-items: center;
+  }
+
+  .icon-btn {
+    margin: 0.2rem 0;
+  }
+
+  .search-input {
+    margin-right: 0;
+    /* Remove unnecessary margin */
+  }
+
+  .btn.btn-outline-warning {
+    width: 100%;
+    /* Full-width button for search */
+  }
+}

@@ -1,0 +1,126 @@
+/* Container Styling */
+.product-img {
+  object-fit: contain; /* Ensures image retains original proportions */
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Ensures rounded corners */
+}
+
+
+
+.container-fluid {
+  padding: 20px;
+}
+
+.animated-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #6f42c1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #6f42c1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Card Styling */
+.product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image Styling */
+.product-img {
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Card Body Styling */
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+.card-body h6 {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* List Group Styling */
+.list-group {
+  margin-bottom: 15px;
+}
+
+.list-group-item {
+  border: none;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  background: #f8f9fa;
+}
+
+.list-group-item span {
+  font-weight: bold;
+  color: #212529;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #6f42c1;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #563d7c;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .product-img {
+    height: 300px;
+    border-radius: 0;
+  }
+
+  .product-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .animated-title {
+    font-size: 1.8rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-body h6,
+  .card-body p {
+    font-size: 0.8rem;
+  }
+
+
+
+}

@@ -1,0 +1,374 @@
+<!-- <div class="container mt-5 d-flex justify-content-center">
+  <div class="card shadow-lg p-4 register-card">
+    <div class="card-header text-center bg-primary text-white">
+      <h4>Register Here!</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                #firstname="ngModel"
+                class="form-control"
+                [(ngModel)]="users.firstName"
+                name="firstName"
+                required
+              />
+              <small
+                class="text-danger"
+                *ngIf="firstname.touched && firstname.errors?.['required']"
+                >First Name is required.</small
+              >
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                #lastname="ngModel"
+                class="form-control"
+                [(ngModel)]="users.lastName"
+                name="lastName"
+                required
+              />
+              <small
+                class="text-danger"
+                *ngIf="lastname.touched && lastname.errors?.['required']"
+                >Last Name is required.</small
+              >
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                #email="ngModel"
+                class="form-control"
+                [(ngModel)]="users.email"
+                name="email"
+                required
+              />
+              <small
+                class="text-danger"
+                *ngIf="email.touched && email.errors?.['required']"
+                >Email is required.</small
+              >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="mobile" class="form-label">Mobile No</label>
+              <input
+                type="text"
+                id="mobile"
+                #mobile="ngModel"
+                class="form-control"
+                [(ngModel)]="users.mobile"
+                name="mobile"
+                required
+              />
+              <small
+                class="text-danger"
+                *ngIf="mobile.touched && mobile.errors?.['required']"
+                >Mobile number is required.</small
+              >
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="password"
+                #password="ngModel"
+                class="form-control"
+                [(ngModel)]="users.password"
+                name="password"
+                required
+              />
+              <small
+                class="text-danger"
+                *ngIf="password.touched && password.errors?.['required']"
+                >Password is required.</small
+              >
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <input
+                type="text"
+                id="address"
+                #address="ngModel"
+                class="form-control"
+                [(ngModel)]="users.address"
+                name="address"
+                required
+              />
+              <small
+                class="text-danger"
+                *ngIf="address.touched && address.errors?.['required']"
+                >Address is required.</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="!registrationForm.valid"
+        >
+          Sign Up
+        </button>
+        <div
+          *ngIf="isRegister"
+          class="alert alert-success d-flex align-items-center mt-3"
+          role="alert"
+        >
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <div>User Registered Successfully!</div>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer text-center">
+      <p>
+        Already have an account?
+        <a class="text-primary fw-bold" routerLink="/login">Sign In</a>
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="card shadow-lg p-4 register-card">
+    <div
+      class="card-header text-center text-white"
+      style="background-color: #6f42c1"
+    >
+      <h4>Register Here!</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-md-6">
+            <!-- First Name -->
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                #firstname="ngModel"
+                class="form-control"
+                [(ngModel)]="users.firstName"
+                name="firstName"
+                placeholder="Enter your firstname"
+                required
+                minlength="2"
+              />
+              <small
+                class="text-danger"
+                *ngIf="firstname.touched && firstname.errors?.['required']"
+              >
+                First Name is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="firstname.touched && firstname.errors?.['minlength']"
+              >
+                First Name must be at least 2 characters long.
+              </small>
+            </div>
+            <!-- Last Name -->
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                #lastname="ngModel"
+                class="form-control"
+                [(ngModel)]="users.lastName"
+                name="lastName"
+                placeholder="Enter your lastname"
+                required
+                minlength="2"
+              />
+              <small
+                class="text-danger"
+                *ngIf="lastname.touched && lastname.errors?.['required']"
+              >
+                Last Name is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="lastname.touched && lastname.errors?.['minlength']"
+              >
+                Last Name must be at least 2 characters long.
+              </small>
+            </div>
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                #email="ngModel"
+                class="form-control"
+                [(ngModel)]="users.email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+                email
+              />
+              <small
+                class="text-danger"
+                *ngIf="email.touched && email.errors?.['required']"
+              >
+                Email is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="email.touched && email.errors?.['email']"
+              >
+                Invalid email format.
+              </small>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <!-- Mobile Number -->
+            <div class="mb-3">
+              <label for="mobile" class="form-label">Mobile No</label>
+              <input
+                type="text"
+                id="mobile"
+                #mobile="ngModel"
+                class="form-control"
+                [(ngModel)]="users.mobile"
+                name="mobile"
+                placeholder="Enter your Mobile no"
+                required
+                pattern="^[0-9]{10}$"
+              />
+              <small
+                class="text-danger"
+                *ngIf="mobile.touched && mobile.errors?.['required']"
+              >
+                Mobile number is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="mobile.touched && mobile.errors?.['pattern']"
+              >
+                Enter a valid 10-digit mobile number.
+              </small>
+            </div>
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="password-container position-relative">
+                <input
+                  type="{{ hide ? 'password' : 'text' }}"
+                  class="form-control"
+                  placeholder="Enter your password"
+                  [(ngModel)]="users.password"
+                  id="password"
+                  #password="ngModel"
+                  name="password"
+                  required
+                  minlength="8"
+                  pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                />
+                <button
+                  type="button"
+                  class="btn toggle-password position-absolute"
+                  (click)="toggleHide()"
+                  aria-label="Toggle password visibility"
+                >
+                  <i
+                    class="fas"
+                    [ngClass]="hide ? 'fa-eye-slash' : 'fa-eye'"
+                  ></i>
+                </button>
+              </div>
+
+              <small
+                class="text-danger"
+                *ngIf="password.touched && password.errors?.['required']"
+              >
+                Password is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="password.touched && password.errors?.['minlength']"
+              >
+                Password must be at least 8 characters long.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="password.touched && password.errors?.['pattern']"
+              >
+                Password must include uppercase, lowercase, number, and special
+                character.
+              </small>
+            </div>
+            <!-- Address -->
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <input
+                type="text"
+                id="address"
+                #address="ngModel"
+                class="form-control"
+                [(ngModel)]="users.address"
+                name="address"
+                placeholder="Enter your address"
+                required
+                minlength="5"
+              />
+              <small
+                class="text-danger"
+                *ngIf="address.touched && address.errors?.['required']"
+              >
+                Address is required.
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="address.touched && address.errors?.['minlength']"
+              >
+                Address must be at least 5 characters long.
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="!registrationForm.valid"
+        >
+          Sign Up
+        </button>
+
+        <!-- Success Message -->
+        <div
+          *ngIf="isRegister"
+          class="alert alert-success d-flex align-items-center mt-3"
+          role="alert"
+        >
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <div>User Registered Successfully!</div>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer text-center">
+      <p>
+        Already have an account?
+        <a class="text-primary fw-bold" routerLink="/login">Sign In</a>
+      </p>
+    </div>
+  </div>
+</div>

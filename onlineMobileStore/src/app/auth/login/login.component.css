@@ -1,0 +1,88 @@
+.login-card {
+  margin-top: 50px;
+  max-width: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.login-card .card-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.login-card .form-label {
+  font-weight: 500;
+}
+
+.login-card .btn {
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.login-card .btn.toggle-password {
+  position: absolute;
+  top: 45%;
+  right: -44px;
+  /* transform: translateY(-50%); */
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.login-card .btn.toggle-password i {
+  color: #6c757d;
+}
+
+.login-card .btn.toggle-password:hover i {
+  color: #495057;
+}
+
+.login-card .btn:disabled {
+  opacity: 0.7;
+}
+
+.login-card .card-footer a {
+  text-decoration: none;
+}
+
+.login-card .card-footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.position-relative {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 66%;
+  right: -44px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: #495057;
+}
+
+.form-control {
+  padding-right: 40px;
+  /* Ensure space for the toggle button */
+}

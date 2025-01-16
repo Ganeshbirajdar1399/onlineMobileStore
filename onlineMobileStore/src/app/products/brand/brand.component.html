@@ -1,0 +1,101 @@
+<div class="container mt-5">
+  <div class="row" style="margin-top: 100px">
+    <!-- Sidebar -->
+    <div class="col-md-3 shop-by-brands">
+      <h4 class="brand-header">Shop by Brands</h4>
+      <ul class="list-group brand-list">
+        <li
+          class="list-group-item brand-item"
+          *ngFor="let brand of getBrands()"
+          (click)="navigateToBrand(brand)"
+          [class.active]="brand === brandName"
+        >
+          {{ brand | titlecase }}
+          <span class="badge rounded-pill product-count">
+            {{ groupedProducts[brand].length || 0 }}
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Product Listing -->
+    <div class="col-md-9">
+      <h2 class="text-center mb-4 text-primary"></h2>
+      <div class="row g-4">
+        <div
+          *ngFor="let product of filteredProducts"
+          class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4"
+        >
+          <div class="card h-100 shadow-sm border-0 product-card">
+            <img
+              [src]="product.image"
+              alt="{{ product.pname }}"
+              [routerLink]="['/product', product.id]"
+              height="200px"
+              width="200px"
+            />
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate"
+                [routerLink]="['/product', product.id]"
+              >
+                {{ product.pname | limitWords : 10 }}
+              </h5>
+              <!-- <p class="card-text text-muted small">
+                {{ product.description | limitWords : 15 }}
+              </p> -->
+              <div class="d-flex justify-content-between align-items-center">
+                {{ product?.psp | currency : "INR" : "₹" }}
+
+                <small class="text-dark">
+                  <s>{{ product?.pop | currency : "INR" : "₹" }}</s>
+                </small>
+
+                <span
+                  *ngIf="
+                    product?.psp && product?.pop && product.pop > product.psp
+                  "
+                  class="badge rounded-pill bg-danger ms-2"
+                >
+                  {{ calculateDiscount(product.psp, product.pop) }}% OFF
+                </span>
+              </div>
+              <div class="text-center mt-3">
+                <button
+                  [routerLink]="['/product', product.id]"
+                  class="btn btn-outline-primary btn-sm"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+            <!-- Hover Icons -->
+            <div class="product-hover-icons">
+              <button
+                class="icon-btn wishlist-btn"
+                title="Add to Wishlist"
+                (click)="addToWishlist(product)"
+              >
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <button
+                class="icon-btn compare-btn"
+                title="Add to Compare"
+                (click)="addToCompare(product)"
+              >
+                <i class="fa-solid fa-code-compare"></i>
+              </button>
+              <button
+                class="icon-btn me-3 position-relative text-light"
+                title="Cart"
+                (click)="addToCart(product)"
+              >
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
