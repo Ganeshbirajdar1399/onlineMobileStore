@@ -65,10 +65,10 @@ export class LoginComponent implements OnInit {
           // Navigate based on user role
           this.router.navigate([user.role]);
         }
-        this.checkStatus = false;
       });
-      this.checkStatus = true;
+      this.checkStatus = false;
     }
+    this.checkStatus = true;
   }
 
   toggleHide() {
