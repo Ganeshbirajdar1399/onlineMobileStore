@@ -1,12 +1,11 @@
-import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '../../core/services/auth/auth.service';
 import { GlobalService } from '../../core/services/global.service';
+import { AuthService } from '../../core/services/auth/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchOrderPipe } from '../../shared/pipes/search-order.pipe';
-
 interface Order {
   id: string;
   userId: string;
@@ -28,9 +27,8 @@ interface Order {
     psp: number;
   }[];
 }
-
 @Component({
-  selector: 'app-orders',
+  selector: 'app-user-orders',
   imports: [
     CommonModule,
     FormsModule,
@@ -38,10 +36,10 @@ interface Order {
     NgxPaginationModule,
     SearchOrderPipe,
   ],
-  templateUrl: './orders.component.html',
-  styleUrl: './orders.component.css',
+  templateUrl: './user-orders.component.html',
+  styleUrl: './user-orders.component.css',
 })
-export class OrdersComponent {
+export class UserOrdersComponent {
   allOrders: Order[] = [];
   filteredOrders: any[] = [];
   isSubmit = false;
@@ -56,9 +54,6 @@ export class OrdersComponent {
   dialogMessage: string = '';
   subscriberIdToDelete: string = ''; // Store the subscriber ID to be deleted
 
-  //filter by name
-  uniqueCustomerNames: string[] = [];
-  selectedCustomer: string = ''; // Holds the currently selected customer name
   constructor(
     private globalService: GlobalService,
     private authService: AuthService,
@@ -81,49 +76,10 @@ export class OrdersComponent {
         this.filteredOrders = this.allOrders.filter(
           (order) => order.userId === this.loggedInUser.id
         );
-        this.populateUniqueCustomerNames();
       } else {
         this.filteredOrders = this.allOrders;
       }
     });
-  }
-
-  populateUniqueCustomerNames(): void {
-    const customerNames = this.allOrders.map((order) => order.customer.name);
-    this.uniqueCustomerNames = Array.from(new Set(customerNames)); // Get unique names
-  }
-
-  filterOrdersByCustomer(): void {
-    if (this.selectedCustomer) {
-      this.filteredOrders = this.allOrders.filter(
-        (order) => order.customer.name === this.selectedCustomer
-      );
-    } else {
-      this.filteredOrders = [...this.allOrders]; // Show all orders if no customer is selected
-    }
-  }
-
-  // Update order status
-  editOrders(orderId: string, newStatus: string): void {
-    const order = this.allOrders.find((o) => o.id === orderId);
-
-    if (order) {
-      // Create a new customer object with the updated status
-      const updatedCustomer = {
-        ...order.customer,
-        status: newStatus,
-      };
-
-      this.globalService.updateOrderStatus(orderId, updatedCustomer).subscribe(
-        (response) => {
-          this.toastr.success('Order Status updated successfully!', 'Success');
-          this.fetchOrders(); // Refresh the orders
-        },
-        (error) => {
-          this.toastr.error('Error updating order status', error);
-        }
-      );
-    }
   }
 
   deleteOrders(id: string): void {

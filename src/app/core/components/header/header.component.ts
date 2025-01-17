@@ -1,14 +1,12 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CartService } from '../../services/cart/cart-service.service';
 import { GetProductService } from '../../services/product/get-product.service';
 import { ProductUtilsService } from '../../services/utils/product-utils.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { CompareService } from '../../services/compare/compare.service';
-import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { GlobalService } from '../../services/global.service';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',
@@ -27,13 +25,18 @@ export class HeaderComponent implements OnInit {
   searchQuery: string = '';
   dropdownStates: { [key: string]: boolean } = {};
 
+  //dialog
+  isDialogOpen: boolean = false;
+  dialogMessage: string = '';
+
   constructor(
     private router: Router,
     private globalService: GlobalService,
     private productService: GetProductService,
     private productUtils: ProductUtilsService,
     public authService: AuthService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private toastr: ToastrService
   ) {
     // Subscribe to cart changes
     this.globalService.getCartObservable().subscribe((cart) => {
@@ -108,7 +111,20 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']); // Redirect after logout
+    this.dialogMessage = 'Are you sure you want to Logout?';
+    this.isDialogOpen = true;
+  }
+
+  // Handle the user response
+  handleConfirmation(confirmed: boolean): void {
+    this.isDialogOpen = false;
+
+    if (confirmed) {
+      this.authService.logout();
+      this.router.navigate(['/login']); // Redirect after logout
+      this.toastr.success('Logout successfully', 'Success');
+    } else {
+      this.toastr.info('Logout canceled', 'Info');
+    }
   }
 }

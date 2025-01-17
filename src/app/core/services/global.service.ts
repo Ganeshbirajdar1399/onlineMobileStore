@@ -162,6 +162,12 @@ export class GlobalService {
       return total + price * quantity;
     }, 0);
   }
+  // Update order status
+  updateOrderStatus(orderId: string, updatedCustomer: any): Observable<any> {
+    return this.http.patch(`${this.apiOrders}/${orderId}`, {
+      customer: updatedCustomer,
+    });
+  }
 
   fetchOrders(): Observable<any> {
     return this.http.get(this.apiOrders);

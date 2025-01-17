@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
   myForm: FormGroup;
   hide = true;
 
+  checkStatus = false;
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -63,7 +65,9 @@ export class LoginComponent implements OnInit {
           // Navigate based on user role
           this.router.navigate([user.role]);
         }
+        this.checkStatus = false;
       });
+      this.checkStatus = true;
     }
   }
 

@@ -136,6 +136,13 @@ export const routes: Routes = [
     data: { role: ['user', 'admin'] },
   },
   {
+    path: 'userOrders',
+    loadComponent: () =>
+      import('./products/user-orders/user-orders.component').then(
+        (m) => m.UserOrdersComponent
+      ),
+  },
+  {
     path: 'otherinfo',
     loadComponent: () =>
       import('./admin/otherinfo/otherinfo.component').then(

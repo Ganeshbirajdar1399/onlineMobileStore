@@ -473,7 +473,8 @@
         "contactNo": "9900990099",
         "email": "sk1@gmail.com",
         "address": "Pune",
-        "billingAddress": "Mumbai"
+        "billingAddress": "Mumbai",
+        "status": "Ordered"
       },
       "userId": "1736601982241",
       "items": [
@@ -495,7 +496,8 @@
         "contactNo": "9900990099",
         "email": "sk1@gmail.com",
         "address": "Satara",
-        "billingAddress": "Pune"
+        "billingAddress": "Pune",
+        "status": "Pending"
       },
       "userId": "1736601982241",
       "items": [
@@ -517,7 +519,8 @@
         "contactNo": "0099009900",
         "email": "ac1@gmail.com",
         "address": "Pune",
-        "billingAddress": "Pune"
+        "billingAddress": "Pune",
+        "status": "Ordered"
       },
       "userId": "1736618026302",
       "items": [
@@ -539,7 +542,8 @@
         "contactNo": "0099009900",
         "email": "ac1@gmail.com",
         "address": "Pune",
-        "billingAddress": "Mumbai"
+        "billingAddress": "Mumbai",
+        "status": "Ordered"
       },
       "userId": "1736618026302",
       "items": [
@@ -561,7 +565,8 @@
         "contactNo": "9999999999",
         "email": "user5@gmail.com",
         "address": "sdfsf",
-        "billingAddress": "sfsdf"
+        "billingAddress": "sfsdf",
+        "status": "Ordered"
       },
       "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
       "items": [
@@ -583,7 +588,8 @@
         "contactNo": "9999999999",
         "email": "user5@gmail.com",
         "address": "dsfsd",
-        "billingAddress": "fsdf"
+        "billingAddress": "fsdf",
+        "status": "Ordered"
       },
       "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
       "items": [
@@ -605,7 +611,8 @@
         "contactNo": "9999999999",
         "email": "user5@gmail.com",
         "address": "dsf",
-        "billingAddress": "fsdff"
+        "billingAddress": "fsdff",
+        "status": "Ordered"
       },
       "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
       "items": [
@@ -627,7 +634,8 @@
         "contactNo": "9999999999",
         "email": "user5@gmail.com",
         "address": "sfdf",
-        "billingAddress": "sdff"
+        "billingAddress": "sdff",
+        "status": "Delivered"
       },
       "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
       "items": [
@@ -649,7 +657,8 @@
         "contactNo": "9999999999",
         "email": "user5@gmail.com",
         "address": "sfd",
-        "billingAddress": "sf"
+        "billingAddress": "sf",
+        "status": "Ordered"
       },
       "userId": "1c8ab9a3-bc0c-4a2e-8038-77f34afec2a8",
       "items": [
@@ -667,16 +676,16 @@
   ],
   "cart": [
     {
-      "id": "16134257-10b4-43d7-8de0-a912b72d6660",
-      "pname": "Oneplus 12R 16/256 GB Iron Gray",
-      "brand": "OnePlus",
-      "description": "1.    16 GB RAM | 256 GB ROM\n2.    17.22 cm (6.78 inch) Display\n3.    50MP Rear Camera\n4.    5500 mAh Battery",
-      "color": "Iron Gray",
-      "disksize": "256 GB",
-      "ram": "16 GB",
-      "psp": 45799,
-      "pop": 45999,
-      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494772/uploads/ydocvhkpksrcx0qssq9o.webp"
+      "id": "2c654f84-e92f-477b-91a4-1ed9b669a52d",
+      "pname": "Redmi 12 5G 6/128 GB Moonstone Silver",
+      "brand": "Redmi",
+      "description": "1. 6 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.25 cm (6.79 inch) Full HD+ Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 4 Gen 2 Processor",
+      "color": "Moonstone Silver",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 12099,
+      "pop": 12499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508456/uploads/f53ezqjysmkccpi3pi29.webp"
     }
   ],
   "compare": [

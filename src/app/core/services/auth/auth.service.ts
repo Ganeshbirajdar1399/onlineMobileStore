@@ -107,7 +107,7 @@ export class AuthService {
   logout(): void {
     sessionStorage.removeItem('user');
     this.userSubject.next(null);
-    this.router.navigate(['/auth/login']);
+    this.router.navigate(['/login']);
   }
 
   fetchUsers(): Observable<Users[]> {

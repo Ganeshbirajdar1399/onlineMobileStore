@@ -4,8 +4,6 @@ import { GlobalService } from '../../core/services/global.service';
 import { CartService } from '../../core/services/cart/cart-service.service';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Required for Toastr
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../../core/services/auth/auth.service';
 
@@ -38,6 +36,7 @@ export class CheckoutComponent implements OnInit {
     email: '',
     address: '',
     billingAddress: '',
+    status: 'Ordered',
   };
 
   constructor(
