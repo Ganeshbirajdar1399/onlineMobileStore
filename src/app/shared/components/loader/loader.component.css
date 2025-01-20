@@ -24,7 +24,7 @@
     height: 100%;
     position: absolute;
     border-radius: 50%;
-    background-color: #3498db;
+    background-color: #6f42c1;
     animation: bouncing 1.5s infinite ease-in-out;
 }
 
