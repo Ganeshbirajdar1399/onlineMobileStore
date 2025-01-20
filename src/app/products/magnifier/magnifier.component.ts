@@ -5,43 +5,170 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
   selector: 'app-magnifier',
   imports: [CommonModule],
   templateUrl: './magnifier.component.html',
-  styleUrl: './magnifier.component.css'
+  styleUrl: './magnifier.component.css',
 })
 export class MagnifierComponent {
-  @Input() image!: string; // Input for image source
-  @ViewChild('lens', { static: true }) lens!: ElementRef<HTMLDivElement>;
-  @ViewChild('result', { static: true }) result!: ElementRef<HTMLDivElement>;
-  @ViewChild('productImage', { static: true }) productImage!: ElementRef<HTMLImageElement>;
+  // @Input() imageSrc: string = ''; // URL of the image
 
-  moveLens(event: MouseEvent) {
-    const image = this.productImage.nativeElement;
-    const lens = this.lens.nativeElement;
-    const result = this.result.nativeElement;
+  // isZoomVisible = false;
+  // lensPosition = { x: 0, y: 0 };
+  // backgroundPosition = '0% 0%';
+  // zoomSize = '200%';
 
-    lens.style.display = 'block';
-    result.style.display = 'block';
+  // showZoom() {
+  //   this.isZoomVisible = true;
+  // }
 
-    const rect = image.getBoundingClientRect();
-    const x = event.clientX - rect.left - lens.offsetWidth / 2;
-    const y = event.clientY - rect.top - lens.offsetHeight / 2;
+  // hideZoom() {
+  //   this.isZoomVisible = false;
+  // }
 
-    // Prevent lens from going out of bounds
-    const lensX = Math.max(0, Math.min(x, image.width - lens.offsetWidth));
-    const lensY = Math.max(0, Math.min(y, image.height - lens.offsetHeight));
+  // onMouseMove(event: MouseEvent) {
+  //   const imageElement = event.target as HTMLElement;
+  //   const rect = imageElement.getBoundingClientRect();
 
-    lens.style.left = `${lensX}px`;
-    lens.style.top = `${lensY}px`;
+  //   // Calculate cursor position within the image
+  //   const x = event.clientX - rect.left;
+  //   const y = event.clientY - rect.top;
 
-    result.style.backgroundImage = `url(${this.image})`;
-    result.style.backgroundPosition = `-${lensX * 2}px -${lensY * 2}px`;
-    result.style.backgroundSize = `${image.width * 2}px ${image.height * 2}px`;
+  //   // Update lens position
+  //   this.lensPosition = {
+  //     x: x - 50, // Offset for the lens size
+  //     y: y - 50,
+  //   };
+
+  //   // Calculate background position for zoom effect
+  //   const xPercent = (x / rect.width) * 100;
+  //   const yPercent = (y / rect.height) * 100;
+
+  //   this.backgroundPosition = `${xPercent}% ${yPercent}%`;
+  // }
+
+  // @Input() imageSrc: string = ''; // URL of the image
+
+  // isZoomVisible = false;
+  // lensPosition = { x: 0, y: 0 };
+  // backgroundPosition = '0% 0%';
+  // zoomSize = '200%';
+  // isMobile = false;
+
+  // ngOnInit() {
+  //   this.isMobile = window.innerWidth <= 768; // Detect mobile view
+  // }
+
+  // // Show zoom lens (triggered on hover or touchstart)
+  // showZoom() {
+  //   this.isZoomVisible = true;
+  // }
+
+  // // Hide zoom lens (triggered on mouse leave or touchend)
+  // hideZoom() {
+  //   this.isZoomVisible = false;
+  // }
+
+  // // Handle mouse movement for desktop
+  // onMouseMove(event: MouseEvent) {
+  //   this.updateLensPosition(
+  //     event.clientX,
+  //     event.clientY,
+  //     event.target as HTMLElement
+  //   );
+  // }
+
+  // // Handle touch movement for mobile
+  // onTouchMove(event: TouchEvent) {
+  //   const touch = event.touches[0];
+  //   this.updateLensPosition(
+  //     touch.clientX,
+  //     touch.clientY,
+  //     event.target as HTMLElement
+  //   );
+  // }
+
+  // // Update lens position and background for zoom effect
+  // private updateLensPosition(
+  //   clientX: number,
+  //   clientY: number,
+  //   target: HTMLElement
+  // ) {
+  //   const rect = target.getBoundingClientRect();
+
+  //   // Calculate cursor position within the image
+  //   const x = clientX - rect.left;
+  //   const y = clientY - rect.top;
+
+  //   // Update lens position
+  //   this.lensPosition = {
+  //     x: x - 50, // Offset for the lens size
+  //     y: y - 50,
+  //   };
+
+  //   // Calculate background position for zoom effect
+  //   const xPercent = (x / rect.width) * 100;
+  //   const yPercent = (y / rect.height) * 100;
+
+  //   this.backgroundPosition = `${xPercent}% ${yPercent}%`;
+  // }
+
+  @Input() imageSrc: string = ''; // Image URL
+
+  isZoomVisible = false;
+  lensPosition = { x: 0, y: 0 };
+  backgroundPosition = '0% 0%';
+  zoomSize = '200%';
+  isMobile = false;
+
+  ngOnInit() {
+    // Determine if the device is mobile
+    this.isMobile = window.innerWidth <= 768;
   }
 
-  hideLens() {
-    const lens = this.lens.nativeElement;
-    const result = this.result.nativeElement;
+  showZoom() {
+    this.isZoomVisible = true;
+  }
 
-    lens.style.display = 'none';
-    result.style.display = 'none';
+  hideZoom() {
+    this.isZoomVisible = false;
+  }
+
+  onMouseMove(event: MouseEvent) {
+    this.updateLensPosition(
+      event.clientX,
+      event.clientY,
+      event.target as HTMLElement
+    );
+  }
+
+  onTouchMove(event: TouchEvent) {
+    const touch = event.touches[0];
+    this.updateLensPosition(
+      touch.clientX,
+      touch.clientY,
+      event.target as HTMLElement
+    );
+  }
+
+  private updateLensPosition(
+    clientX: number,
+    clientY: number,
+    target: HTMLElement
+  ) {
+    const rect = target.getBoundingClientRect();
+
+    // Calculate position within the image
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+
+    // Update lens position
+    this.lensPosition = {
+      x: x - 50, // Offset for lens size
+      y: y - 50,
+    };
+
+    // Update background position for zoom effect
+    const xPercent = (x / rect.width) * 100;
+    const yPercent = (y / rect.height) * 100;
+
+    this.backgroundPosition = `${xPercent}% ${yPercent}%`;
   }
 }

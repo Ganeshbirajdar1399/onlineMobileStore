@@ -1,7 +1,70 @@
-<div #result class="result"></div>
-<div class="image-container" (mousemove)="moveLens($event)" (mouseleave)="hideLens()">
-    <img #productImage [src]="image" alt="Product Image" class="zoom-image" />
-    <div #lens class="lens"></div>
-  </div>
-  
-  
+<!-- <div
+  class="image-magnifier"
+  (mousemove)="onMouseMove($event)"
+  (mouseleave)="hideZoom()"
+>
+  <img
+    [src]="imageSrc"
+    alt="Product Image"
+    class="product-image"
+    (mouseenter)="showZoom()"
+  />
+
+  <div
+    class="zoom-lens"
+    *ngIf="isZoomVisible"
+    [ngStyle]="{
+      top: lensPosition.y + 'px',
+      left: lensPosition.x + 'px'
+    }"
+  ></div>
+
+  <div
+    class="zoom-result"
+    *ngIf="isZoomVisible"
+    [ngStyle]="{
+      backgroundImage: 'url(' + imageSrc + ')',
+      backgroundPosition: backgroundPosition,
+      backgroundSize: zoomSize
+    }"
+  ></div>
+</div>
+ -->
+
+<div
+  class="image-magnifier"
+  (mousemove)="!isMobile && onMouseMove($event)"
+  (mouseleave)="!isMobile && hideZoom()"
+  (touchstart)="isMobile && showZoom()"
+  (touchmove)="isMobile && onTouchMove($event)"
+  (touchend)="isMobile && hideZoom()"
+>
+  <!-- Image -->
+  <img
+    [src]="imageSrc"
+    alt="Product Image"
+    class="product-image"
+    (mouseenter)="!isMobile && showZoom()"
+  />
+
+  <!-- Zoom Lens -->
+  <div
+    class="zoom-lens"
+    *ngIf="isZoomVisible"
+    [ngStyle]="{
+      top: lensPosition.y + 'px',
+      left: lensPosition.x + 'px'
+    }"
+  ></div>
+
+  <!-- Zoom Result -->
+  <div
+    class="zoom-result"
+    *ngIf="isZoomVisible"
+    [ngStyle]="{
+      backgroundImage: 'url(' + imageSrc + ')',
+      backgroundPosition: backgroundPosition,
+      backgroundSize: zoomSize
+    }"
+  ></div>
+</div>

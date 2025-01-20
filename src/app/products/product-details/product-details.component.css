@@ -1,9 +1,11 @@
 /* Container Styling */
 .product-img {
-  object-fit: contain; /* Ensures image retains original proportions */
+  object-fit: contain;
+  /* Ensures image retains original proportions */
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Ensures rounded corners */
+  border-radius: 10px;
+  /* Ensures rounded corners */
 }
 
 
@@ -14,7 +16,7 @@
 
 .animated-title {
   font-family: 'Roboto', sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #6f42c1;
   text-transform: uppercase;
@@ -120,7 +122,4 @@
   .card-body p {
     font-size: 0.8rem;
   }
-
-
-
 }

@@ -676,18 +676,6 @@
   ],
   "cart": [
     {
-      "id": "2c654f84-e92f-477b-91a4-1ed9b669a52d",
-      "pname": "Redmi 12 5G 6/128 GB Moonstone Silver",
-      "brand": "Redmi",
-      "description": "1. 6 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.25 cm (6.79 inch) Full HD+ Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 4 Gen 2 Processor",
-      "color": "Moonstone Silver",
-      "disksize": "128 GB",
-      "ram": "6 GB",
-      "psp": 12099,
-      "pop": 12499,
-      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508456/uploads/f53ezqjysmkccpi3pi29.webp"
-    },
-    {
       "id": "e0f0354a-ee0d-4729-ba09-e317130f7c13",
       "pname": "Oneplus Nord Ce 4 Lite 8/256 GB Mega Blue",
       "brand": "OnePlus",

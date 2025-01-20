@@ -5,7 +5,7 @@
       <h4 class="brand-header">Shop by Brands</h4>
       <ul class="list-group brand-list">
         <li
-          class="list-group-item brand-item"
+          class="list-group-item brandlink brand-item"
           *ngFor="let brand of getBrands()"
           (click)="navigateToBrand(brand)"
           [class.active]="brand === brandName"

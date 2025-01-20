@@ -75,6 +75,10 @@
 /* .shop-by-brands:hover {
   transform: scale(1.02);
 } */
+.brandlink:hover {
+  color: #6f42c1;
+  font-weight: bold;
+}
 
 .brand-header {
   background-color: #6f42c1;

@@ -4,10 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import { GetProductService } from '../../core/services/product/get-product.service';
 import { GlobalService } from '../../core/services/global.service';
 import { ToastrService } from 'ngx-toastr';
+import { MagnifierComponent } from '../magnifier/magnifier.component';
 
 @Component({
   selector: 'app-product-details',
-  imports: [CommonModule],
+  imports: [CommonModule, MagnifierComponent],
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css'],
 })

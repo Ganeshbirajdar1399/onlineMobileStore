@@ -102,3 +102,8 @@
     /* Full-width button for search */
   }
 }
+
+.brandlink:hover {
+  color: #6f42c1;
+  font-weight: bold;
+}

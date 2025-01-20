@@ -8,14 +8,7 @@
         <div class="row g-0">
           <!-- Product Image -->
           <div class="col-md-6">
-            <img
-              [src]="product?.image"
-              class="img-fluid rounded-start"
-              alt="Product Name"
-              height="400px"
-              width="400px"
-            />
-            <!-- <app-magnifier [image]="product?.image"></app-magnifier> -->
+            <app-magnifier [imageSrc]="product?.image"></app-magnifier>
           </div>
 
           <!-- Product Details -->

@@ -143,7 +143,11 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item" *ngFor="let brand of getBrands()">
-        <button class="nav-link" (click)="navigateToBrand(brand)">
+        <button
+          class="nav-link brandlink"
+          (click)="navigateToBrand(brand)"
+          routerLinkActive="active"
+        >
           {{ brand | titlecase }}
         </button>
       </li>
