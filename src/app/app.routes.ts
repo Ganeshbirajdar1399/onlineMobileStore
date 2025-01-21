@@ -4,27 +4,10 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 import { roleGuard } from './core/services/role.guard';
 import { authGuard } from './guard/auth.guard';
 import { MainComponent } from './home/main.component';
-// import { MainComponent } from './home/main/main.component';
-// import { CartComponent } from './products/cart/cart.component';
-// import { NotFoundComponentComponent } from './core/components/not-found-component/not-found-component.component';
-// import { LoginComponent } from './auth/login/login/login.component';
-// import { RegisterComponent } from './auth/signup/register/register.component';
-// import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
-// import { UserProfileComponent } from './profile/user-profile/user-profile.component';
-// import { UpdateprofileComponent } from './profile/updateprofile/updateprofile.component';
-// import { CompareComponent } from './products/compare/compare.component';
-// import { WishlistComponent } from './products/wishlist/wishlist.component';
-// import { OtherinfoComponent } from './admin/otherinfo/otherinfo.component';
-// import { ProductsearchComponent } from './products/productsearch/productsearch.component';
-// import { CheckoutComponent } from './products/checkout/checkout.component';
-// import { OrdersComponent } from './admin/orders/orders.component';
-
 export const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
-    // loadComponent: () =>
-    //   import('./home/main/main.component').then((m) => m.MainComponent),
+    component: MainComponent
   },
   {
     path: 'login',
