@@ -12,16 +12,81 @@
 </div>
 
 <div class="sidebar" [ngClass]="{ active: sidebarOpen }">
-  <ul class="nav-links">
+  <!-- <ul class="nav-links">
     <li class="nav-link" *ngFor="let brand of getBrands()">
       <button class="dropdown-item" (click)="navigateToBrand(brand)">
         {{ brand | titlecase }}
       </button>
-    </li>
-  </ul>
+    </li> -->
+  <div class="dropdown d-flex justify-content-center">
+    <button
+      class="btn btn-success btn-outline-light dropdown-toggle my-3"
+      type="button"
+      id="brandDropdown"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Select Brand
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+      <li *ngFor="let brand of getBrands()">
+        <button class="dropdown-item" (click)="navigateToBrand(brand)">
+          {{ brand | titlecase }}
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="dropdown user-dropdown d-flex justify-content-center">
+    <button
+      class="btn btn-success btn-outline-light dropdown-toggle mb-3"
+      type="button"
+      id="userDropdown"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <i class="fas fa-user"></i>
+      <small>{{ loggedInUser?.firstName }} {{ loggedInUser?.lastName }}</small>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+      <li *ngIf="isLoggedIn()">
+        <button class="dropdown-item" routerLink="profile">Profile</button>
+      </li>
+      <li *ngIf="loggedInUser?.role === 'admin'">
+        <button class="dropdown-item" routerLink="crudproducts">
+          Products
+        </button>
+      </li>
+      <li *ngIf="loggedInUser?.role === 'admin'">
+        <button class="dropdown-item" routerLink="customers">Customers</button>
+      </li>
+      <li>
+        <button
+          class="dropdown-item"
+          routerLink="orders"
+          (click)="checkLogin()"
+        >
+          Orders
+        </button>
+      </li>
+      <li *ngIf="loggedInUser?.role === 'admin'">
+        <button class="dropdown-item" routerLink="otherinfo">
+          Website Data
+        </button>
+      </li>
+      <li *ngIf="!isLoggedIn()">
+        <button class="dropdown-item" routerLink="login">Login</button>
+      </li>
+      <li *ngIf="!isLoggedIn()">
+        <button class="dropdown-item" routerLink="register">Register</button>
+      </li>
+      <li *ngIf="isLoggedIn()">
+        <button class="dropdown-item" (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </div>
   <form class="d-flex me-3" role="search" (submit)="onSearch()">
     <input
-      class="form-control me-2 search-input"
+      class="form-control me-1 ms-3 search-input"
       type="search"
       placeholder="Search..."
       [(ngModel)]="searchQuery"
@@ -33,7 +98,8 @@
       Search
     </button>
   </form>
-  <ul class="nav-links user-section">
+
+  <!-- <ul class="nav-links user-section">
     <li>
       <i class="fas fa-user"></i>
       <small>{{ loggedInUser?.firstName }} {{ loggedInUser?.lastName }}</small>
@@ -58,13 +124,6 @@
     <button class="nav-link" routerLink="orders" (click)="checkLogin()">
       Orders
     </button>
-    <!-- <button
-      *ngIf="loggedInUser?.role === 'user'"
-      class="nav-link"
-      routerLink="userOrders"
-    >
-      Orders
-    </button> -->
     <button
       *ngIf="loggedInUser?.role === 'admin'"
       class="nav-link"
@@ -81,8 +140,8 @@
     <button *ngIf="isLoggedIn()" class="nav-link" (click)="logout()">
       Logout
     </button>
-  </ul>
-  <ul class="nav-links justify-content-start align-items-start">
+  </ul> -->
+  <ul class="nav-links justify-content-center mt-2">
     <button class="icon-btn text-light" title="Wishlist" routerLink="wishlist">
       <i class="bi bi-heart"></i>
       <span *ngIf="wishlistCount > 0" class="badge rounded-pill bg-danger">
@@ -123,24 +182,33 @@
     class="navbar-toggler"
     type="button"
     data-bs-toggle="collapse"
-    data-bs-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
     aria-expanded="false"
     aria-label="Toggle navigation"
     (click)="toggleSidebar()"
   >
     <i class="fas" [ngClass]="sidebarOpen ? 'fa-times' : 'fa-bars'"></i>
+  </button> -->
+  <!-- Sidebar Toggle Button -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    (click)="toggleSidebar()"
+    aria-label="Toggle navigation"
+  >
+    <i class="fas" [ngClass]="sidebarOpen ? 'fa-times' : 'fa-bars'"></i>
   </button>
+
+  <!-- Sidebar -->
+  <div class="sidebar" [ngClass]="{ active: sidebarOpen }">
+    <!-- Sidebar content here -->
+  </div>
+
+  <!-- Backdrop -->
+  <div
+    class="sidebar-backdrop"
+    *ngIf="sidebarOpen"
+    (click)="closeSidebar()"
+  ></div>
 
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -245,11 +313,6 @@
               Orders
             </button>
           </li>
-          <!-- <li *ngIf="loggedInUser?.role === 'user'">
-            <button class="dropdown-item" routerLink="userOrders">
-              Orders
-            </button>
-          </li> -->
           <li *ngIf="loggedInUser?.role === 'admin'">
             <button class="dropdown-item" routerLink="otherinfo">
               Website Info

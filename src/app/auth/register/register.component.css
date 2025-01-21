@@ -1,8 +1,9 @@
 .register-card {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   max-width: 500px;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .register-card .card-header {

@@ -1,8 +1,9 @@
 .login-card {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   max-width: 450px;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .login-card .card-header {
@@ -49,19 +50,6 @@
 .login-card .card-footer a:hover {
   text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .position-relative {
   position: relative;
