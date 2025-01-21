@@ -127,4 +127,9 @@ export class HeaderComponent implements OnInit {
       this.toastr.info('Logout canceled', 'Info');
     }
   }
+  checkLogin() {
+    if (!this.loggedInUser) {
+      this.toastr.info('Please logged in for view orders', 'Message');
+    }
+  }
 }

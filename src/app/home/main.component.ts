@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { GetProductService } from '../../core/services/product/get-product.service';
+import { GetProductService } from '../core/services/product/get-product.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { ProductUtilsService } from '../../core/services/utils/product-utils.service';
-import { GlobalService } from '../../core/services/global.service';
-import { Webdata } from '../../core/services/product/webdata';
+import { ProductUtilsService } from '../core/services/utils/product-utils.service';
+import { GlobalService } from '../core/services/global.service';
+import { Webdata } from '../core/services/product/webdata';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

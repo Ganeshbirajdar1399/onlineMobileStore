@@ -1,3 +1,4 @@
+/* Main Card Styling */
 .main-card {
   margin: 2rem auto;
   max-width: 100%;
@@ -7,16 +8,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Card Header */
 .card-header {
   font-size: 1.5rem;
   padding: 1rem;
   border-bottom: 2px solid #ffffff;
 }
 
-/* .card-body {
-  padding: 2rem;
-} */
-
+/* Product Card */
 .product-card {
   background: #ffffff;
   border-radius: 8px;
@@ -44,7 +43,6 @@
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #ffffff;
 }
 
 .card-text {
@@ -52,10 +50,7 @@
   color: #e8e8e8;
 }
 
-/* .row {
-  gap: 1rem;
-} */
-
+/* Brand Card */
 .brand-card {
   padding: 2rem;
   border-radius: 10px;
@@ -78,62 +73,7 @@
   padding-bottom: 0.5rem;
 }
 
-.product-card {
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .card-img-top {
-  transform: scale(1.05);
-}
-
-.card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
-}
-
-.card-text {
-  font-size: 0.9rem;
-  color: #e8e8e8;
-}
-
-/* Unique Colors for Each Brand */
-.brand-card-0 {
-  background-color: #fff;
-  /* Light Pink */
-}
-
-.brand-card-1 {
-  background-color: #fff;
-  /* Light Blue */
-}
-
-.brand-card-2 {
-  background-color: #fff;
-  /* Light Green */
-}
-
-.brand-card-3 {
-  background-color: #fff;
-  /* Light Yellow */
-}
-
+/* Carousel Control Buttons */
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -142,21 +82,17 @@
   width: 40px;
   height: 40px;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Add a semi-transparent background */
   border-radius: 50%;
-  /* Make the buttons circular */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
-  /* Ensure the buttons appear above other elements */
   cursor: pointer;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background-color: #6f42c1;
-  /* Darken background on hover */
 }
 
 .carousel-control-prev-icon,
@@ -164,73 +100,72 @@
   width: 20px;
   height: 20px;
   background-size: 100%;
-  /* Ensure the icon covers the entire button */
 }
 
-.carousel-control-prev {
-  left: 10px;
-  /* Position the button on the left */
-}
+.carousel-control-prev { left: 10px; }
+.carousel-control-next { right: 10px; }
 
-.carousel-control-next {
-  right: 10px;
-  /* Position the button on the right */
-}
-
-
-
-
-
-/* Icon positioning and visibility */
+/* Product Hover Icons */
 .product-hover-icons {
   position: absolute;
-  top: 08%;
-  left: 54%;
+  top: 8%;
+  left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  /* Hidden by default */
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .product-card:hover .product-hover-icons {
   display: flex;
-  /* Display icons when hovering */
   opacity: 1;
+  transform: translate(-50%, -40%);
 }
 
+/* Icon Button Styles */
 .icon-btn {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   border: none;
-  padding: 06px;
+  padding: 6px;
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .icon-btn:hover {
   transform: scale(1.1);
-  /* Slight zoom effect on hover */
 }
 
-.wishlist-btn {
-  background-color: #f04e23;
-  /* Orange color for Wishlist */
-}
+.wishlist-btn { background-color: #f04e23; }
+.compare-btn { background-color: #00aaff; }
+.cart-btn { background-color: #28a745; }
 
-.compare-btn {
-  background-color: #00aaff;
-  /* Blue color for Compare */
-}
-
-/* Optional: Add a shadow effect when hovering */
 .product-card:hover .icon-btn {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .product-hover-icons {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    opacity: 1;
+    gap: 10px;
+  }
 
+  .icon-btn {
+    padding: 8px;
+    font-size: 1.4rem;
+    margin: 0 10px;
+  }
+}
+
+/* Carousel Image */
 .carousel-inner img {
   max-width: 100%;
   height: auto;

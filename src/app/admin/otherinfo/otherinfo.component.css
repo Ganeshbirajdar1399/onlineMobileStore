@@ -1,4 +1,4 @@
-/* add-products.component.css */
+/* General Styles */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -10,13 +10,13 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Table Styles */
 .product-table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .product-table th,
 .product-table td {
@@ -38,31 +38,14 @@ h2 {
   background-color: #f1f1f1;
 }
 
+/* Image Styles */
 .product-img {
   width: 50px;
   height: auto;
   border-radius: 5px;
 }
 
-/* Desktop view: Both table and cards shown side by side */
-.desktop-view {
-  display: flex;
-  justify-content: space-between;
-}
-
-.table-container {
-  width: 45%;
-}
-
-.card-container {
-  width: 45%;
-}
-
-.product-cards {
-  display: none;
-  /* Hide on desktop */
-}
-
+/* Card Styles */
 .product-cards .card {
   border: 1px solid #ddd;
   margin-bottom: 20px;
@@ -82,77 +65,51 @@ h2 {
   margin: 5px 0;
 }
 
+.product-cards {
+  display: none; /* Hide cards on desktop */
+}
+
 .product-img {
   width: 80px;
-  /* Increase image size for mobile view */
   height: auto;
   border-radius: 5px;
 }
 
-/* Responsive design for mobile: Only cards are shown */
+/* Desktop View */
+.desktop-view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-container,
+.card-container {
+  width: 45%;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .desktop-view {
+  /* Hide desktop view and table on mobile */
+  .desktop-view,
+  .product-table {
     display: none;
-    /* Hide the desktop view on mobile */
   }
 
+  /* Show cards only on mobile */
   .mobile-view {
     display: block;
-    /* Only show cards on mobile */
   }
 
   .product-cards {
-    display: block;
+    display: block; /* Show cards on mobile */
   }
 
-  .product-table {
-    display: none;
-    /* Hide table on mobile */
-  }
-
-  .product-cards .card {
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .product-cards .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .product-cards .card-text {
-    font-size: 14px;
-    margin: 5px 0;
-  }
-
-  .product-img {
-    width: 80px;
-    height: auto;
-    border-radius: 5px;
-  }
-
+  /* Adjust container padding on mobile */
   .container {
-    width: 100%;
     padding: 10px;
   }
-}
 
-.pagination {
-  display: block;
-  /* Default */
-}
-
-@media (max-width: 768px) {
+  /* Hide pagination on mobile */
   .pagination {
     display: none;
-    /* Hide pagination in mobile view */
   }
 }
-
-
-
-

@@ -9,48 +9,119 @@
   /* Adds slight lift on hover */
 }
 
-/* Icon positioning and visibility */
+.product-card img {
+  align-self: center;
+  object-fit: contain;
+  /* Ensures the image scales proportionally */
+  max-height: 200px;
+  /* Limits the height */
+  max-width: 100%;
+  /* Ensures the image does not overflow */
+  margin-bottom: 10px;
+  /* Adds some spacing between the image and other content */
+}
+
+/* Icon positioning and visibility (default for desktop) */
 .product-hover-icons {
   position: absolute;
-  top: 5%;
-  left: 80%;
+  top: 8%;
+  left: 50%;
   transform: translate(-50%, -50%);
   display: none;
   /* Hidden by default */
   opacity: 0;
-  transition: opacity 0.3s ease;
+  /* Invisible by default */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Show icons on hover (desktop view) */
 .product-card:hover .product-hover-icons {
   display: flex;
-  /* Display icons when hovering */
+  /* Show on hover */
   opacity: 1;
+  transform: translate(-50%, -40%);
 }
 
+/* Icon button styles */
 .icon-btn {
   background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent background */
   color: #fff;
+  /* White icon color */
   border: none;
-  padding: 10px;
+  padding: 6px;
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  /* Icon size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect for icons */
 .icon-btn:hover {
   transform: scale(1.1);
-  /* Slight zoom effect on hover */
+  /* Slight zoom effect */
 }
 
+/* Specific button colors */
 .wishlist-btn {
   background-color: #f04e23;
-  /* Orange color for Wishlist */
+  /* Orange for Wishlist */
 }
 
 .compare-btn {
   background-color: #00aaff;
-  /* Blue color for Compare */
+  /* Blue for Compare */
+}
+
+.cart-btn {
+  background-color: #28a745;
+  /* Green for Cart */
+}
+
+/* Optional: Shadow effect for icons */
+.product-card:hover .icon-btn {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  /* Always display icons at the top */
+  .product-hover-icons {
+    position: absolute;
+    top: 10px;
+    /* Position at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    display: flex;
+    /* Always visible */
+    opacity: 1;
+    /* Fully visible */
+    gap: 10px;
+    /* Spacing between buttons */
+  }
+
+  /* Adjust icon size and spacing for mobile */
+  .icon-btn {
+    padding: 8px;
+    /* Larger touch area */
+    font-size: 1.4rem;
+    /* Bigger icons */
+    margin: 0 10px;
+    /* Adjust spacing */
+  }
+}
+
+/* For better mobile responsiveness, ensure the image stays centered */
+@media (max-width: 768px) {
+  .product-card img {
+    max-height: 180px;
+    /* Adjust for mobile */
+    align-self: center;
+  }
 }
 
 /* Optional: Add a shadow effect when hovering */

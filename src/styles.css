@@ -1,15 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-
-html,
-body {
+/* Global Styles */
+html, body {
   height: 100%;
-}
-
-body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  /* background: linear-gradient(135deg, #6f42c1 0%, #fad0c4 100%); */
-  /* visibility: hidden; */
 }
 
 .main-container {
@@ -17,45 +10,36 @@ body {
 }
 
 /* Sidebar Styles */
-
-/* Sidebar Styles */
 .sidebar {
   display: none;
   position: fixed;
   top: 0;
-  left: -260px;
-  /* Initially hidden */
+  left: -260px; /* Initially hidden */
   width: 250px;
   height: 100vh;
   background-color: #6f42c1;
-  /* Dark background */
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
   transition: left 0.3s ease-in-out;
   z-index: 1050;
 }
 
-/* Active state for sidebar */
 .sidebar.active {
-  left: 0;
-  /* Sidebar slides in */
+  left: 0; /* Sidebar slides in */
 }
 
-/* For medium and small screens */
 @media (max-width: 991px) {
   .sidebar {
     display: block;
   }
 }
 
-/* Sidebar Links */
 .nav-links {
   list-style-type: none;
   padding: 0;
   margin: 20px 0;
 }
 
-/* Sidebar link items */
 .nav-links .nav-link {
   padding: 12px 20px;
   margin: 8px 0;
@@ -68,17 +52,13 @@ body {
 
 .nav-links .nav-link:hover {
   background-color: #2980b9;
-  /* Hover effect */
   transform: scale(1.05);
-  /* Subtle scale animation */
 }
 
 .nav-links .nav-link:active {
   transform: scale(0.98);
-  /* Shrink effect on click */
 }
 
-/* For icons inside links */
 .nav-links .nav-link i {
   margin-right: 10px;
 }
@@ -111,8 +91,7 @@ body {
   background-color: #16a085;
 }
 
-
-/* Smooth transition for sidebar toggle */
+/* Sidebar Toggler */
 .navbar-toggler {
   border: none;
   background: none;
@@ -120,13 +99,11 @@ body {
   color: #ecf0f1;
 }
 
-/* Optional: If you want to make the sidebar content scrollable */
 .sidebar .nav-links {
   max-height: 80vh;
   overflow-y: auto;
 }
 
-/* Additional custom styles for mobile devices */
 @media (max-width: 576px) {
   .sidebar {
     width: 200px;
@@ -141,30 +118,19 @@ body {
   }
 }
 
-
-/* tostr*/
+/* Toasts */
 .toast-success {
   background-color: #28a745 !important;
-  /* Success background */
   color: #fff !important;
-  /* Text color */
 }
 
 .toast-warning {
   background-color: #ffc107 !important;
-  /* Yellow background for warnings */
   color: #000 !important;
-}
-
-.toast-success {
-  background-color: #28a745 !important;
-  /* Green background for success */
-  color: #fff !important;
 }
 
 .toast-error {
   background-color: #dc3545 !important;
-  /* Error background */
   color: #fff !important;
 }
 
@@ -173,8 +139,7 @@ body {
   right: 12px;
 }
 
-
-/* dialog confirmation*/
+/* Dialog Confirmation */
 .dialog-overlay {
   position: fixed;
   top: 0;
@@ -211,8 +176,7 @@ body {
   justify-content: space-between;
 }
 
-.cancel-btn {
-  background: #f44336;
+.cancel-btn, .confirm-btn {
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -220,32 +184,28 @@ body {
   cursor: pointer;
 }
 
+.cancel-btn {
+  background: #f44336;
+}
+
 .confirm-btn {
   background: #4caf50;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 button:hover {
   opacity: 0.9;
 }
 
-/* spinner*/
+/* Spinner */
 .overlay {
   position: fixed;
-  /* Fixed positioning to cover the entire screen */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.7);
-  /* Semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  /* Ensure it's on top */
 }

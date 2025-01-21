@@ -10,9 +10,8 @@
     </div>
   </div>
 </div>
-<div class="container mt-5">
+<div class="container-fluid mt-5">
   <h2 class="text-center mb-4" style="color: #6f42c1">Wishlist Products</h2>
-
   <!-- Table view for larger screens -->
   <div class="table-responsive d-none d-md-block">
     <table class="table table-bordered table-hover shadow-sm">
@@ -85,10 +84,13 @@
         </tr>
       </tbody>
     </table>
+    <div class="d-flex justify-content-end align-content-center my-2">
+      <button class="btn btn-danger" (click)="clearWishlist()">
+        Delete All
+      </button>
+    </div>
   </div>
-  <div class="d-flex justify-content-center align-content-center my-2">
-    <button class="btn btn-danger" (click)="clearWishlist()">Delete All</button>
-  </div>
+
   <!-- Card view for smaller screens -->
   <div class="d-block d-md-none">
     <div *ngFor="let product of wishlistItems" class="card mb-3 shadow-sm">

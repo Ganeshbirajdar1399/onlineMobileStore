@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable, throwError } from 'rxjs';
 import { Users } from './users';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -45,11 +45,40 @@ export class AuthService {
             3000
           );
           return userWithoutPassword; // Success path
+        } else {
+          // If user is not found or password doesn't match, throw an error
+          throw new Error('Invalid email or password');
         }
-        return null; // Fallback if user is not found or password doesn't match
+      }),
+      catchError((error) => {
+        // Show a Snackbar for the error and rethrow it
+        this.showSnackbar('Invalid email or password. Please try again.', 3000);
+        return throwError(() => error); // Rethrow the error so the component can handle it
       })
     );
   }
+
+  // login(email: string, password: string): Observable<any> {
+  //   return this.http.get<Users[]>(`${this.apiUrl}/users?email=${email}`).pipe(
+  //     map((users) => {
+  //       const user = users[0];
+  //       if (user && user.password === password) {
+  //         const { password: _, ...userWithoutPassword } = user;
+  //         this.setUser(userWithoutPassword);
+  //         this.showSnackbar(
+  //           `${userWithoutPassword.firstName} ${userWithoutPassword.lastName} logged in successfully`,
+  //           3000
+  //         );
+  //         return userWithoutPassword; // Success path
+  //       }
+  //       // return null; // Fallback if user is not found or password doesn't match
+  //       return this.showSnackbar(
+  //         `Invalid email or password. please try again`,
+  //         3000
+  //       );
+  //     })
+  //   );
+  // }
 
   register(user: Users): Observable<Users> {
     return this.http.post<Users>(`${this.apiUrl}/users`, user);

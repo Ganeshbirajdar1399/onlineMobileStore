@@ -3,7 +3,7 @@ import { BrandComponent } from './products/brand/brand.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { roleGuard } from './core/services/role.guard';
 import { authGuard } from './guard/auth.guard';
-import { MainComponent } from './home/main/main.component';
+import { MainComponent } from './home/main.component';
 // import { MainComponent } from './home/main/main.component';
 // import { CartComponent } from './products/cart/cart.component';
 // import { NotFoundComponentComponent } from './core/components/not-found-component/not-found-component.component';

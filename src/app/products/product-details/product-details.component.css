@@ -1,19 +1,17 @@
 /* Container Styling */
 .product-img {
   object-fit: contain;
-  /* Ensures image retains original proportions */
   width: 100%;
   height: auto;
   border-radius: 10px;
-  /* Ensures rounded corners */
 }
 
-
-
+/* Fluid Container */
 .container-fluid {
   padding: 20px;
 }
 
+/* Animated Title */
 .animated-title {
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
@@ -34,6 +32,7 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #f8f9fa;
+  transition: box-shadow 0.3s ease;
 }
 
 .product-card:hover {
@@ -44,8 +43,7 @@
 .product-img {
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px 10px 0 0; /* Combined border-radius */
 }
 
 /* Card Body Styling */

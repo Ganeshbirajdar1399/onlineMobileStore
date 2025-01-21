@@ -1,24 +1,17 @@
+/* Navbar Styles */
 .navbar {
   position: fixed;
-  /* Fix to the top */
   top: 0;
   width: 100%;
   z-index: 1000;
-  /* Ensure it stays on top of other elements */
   background-color: #6f42c1;
   color: white;
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.search-button {
-  padding: 3px;
-  height: 36px;
-}
-
 .navbar-toggler {
   border: none;
-  /* Remove border from toggler */
 }
 
 .navbar-toggler-icon {
@@ -29,29 +22,28 @@
 
 .navbar-collapse {
   background-color: #fff;
-  /* Matches navbar background */
   z-index: 1050;
-  /* Ensures it stays on top */
   padding: 1rem;
 }
 
 /* Links and Search Bar */
 .navbar-nav .nav-link {
   font-size: 0.9rem;
-  /* Smaller font for compact view */
   margin-bottom: 0.5rem;
   text-align: center;
-  /* Center links for mobile */
 }
 
 .search-input {
   width: 100%;
-  /* Full-width input on mobile */
   margin-bottom: 0.5rem;
-  /* Spacing below the search bar */
 }
 
-/* Icon Section */
+.search-button {
+  padding: 3px;
+  height: 36px;
+}
+
+/* Icon Button Styles */
 .icon-btn {
   border: none;
   background: transparent;
@@ -61,7 +53,6 @@
 
 .icon-btn:hover {
   color: #6f42c1;
-  /* Matches the warning color theme */
 }
 
 .icon-btn .badge {
@@ -74,17 +65,13 @@
   .navbar-collapse {
     position: absolute;
     top: 100%;
-    /* Push below navbar */
     left: 0;
     width: 100%;
-    /* Full width */
     border-top: 1px solid #e9ecef;
-    /* Separator line */
   }
 
   .d-flex.justify-content-end {
     flex-direction: column;
-    /* Stack icons vertically */
     align-items: center;
   }
 
@@ -94,15 +81,14 @@
 
   .search-input {
     margin-right: 0;
-    /* Remove unnecessary margin */
   }
 
   .btn.btn-outline-warning {
     width: 100%;
-    /* Full-width button for search */
   }
 }
 
+/* Hover Effect for Brand Link */
 .brandlink:hover {
   color: #6f42c1;
   font-weight: bold;

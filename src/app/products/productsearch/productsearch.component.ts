@@ -59,9 +59,11 @@ export class ProductsearchComponent implements OnInit {
 
   // Fetch products based on search query
   fetchProducts() {
-    this.productService.searchProducts(this.searchQuery).subscribe((data: any) => {
-      this.products = data;
-    });
+    this.productService
+      .searchProducts(this.searchQuery)
+      .subscribe((data: any) => {
+        this.products = data;
+      });
   }
 
   // Clear search results

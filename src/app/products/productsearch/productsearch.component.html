@@ -1,84 +1,82 @@
 <div class="container-fluid mt-5">
   <div class="brand-card shadow-lg">
-    <div class="row">
-      <!-- Product Listing -->
+    <!-- Product Listing -->
 
-      <h3>
-        Search Results for <span class="text-primary">"{{ searchQuery }}"</span>
-      </h3>
-      <h2 class="text-center mb-4 text-primary"></h2>
-      <div class="row g-4" *ngIf="products.length; else noResults">
-        <div
-          *ngFor="let product of products"
-          class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3"
-        >
-          <div class="card shadow-sm border-0 product-card">
-            <img
-              [src]="product.image"
-              alt="{{ product.pname }}"
+    <h3>
+      Search Results for <span class="text-primary">"{{ searchQuery }}"</span>
+    </h3>
+    <h2 class="text-center mb-4 text-primary"></h2>
+    <div class="row g-4" *ngIf="products.length; else noResults">
+      <div
+        *ngFor="let product of products"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3"
+      >
+        <div class="card shadow-sm border-0 product-card">
+          <img
+            [src]="product.image"
+            alt="{{ product.pname }}"
+            [routerLink]="['/product', product.id]"
+            height="200px"
+            width="200px"
+          />
+          <div class="card-body">
+            <h5
+              class="card-title text-truncate"
               [routerLink]="['/product', product.id]"
-              height="200px"
-              width="200px"
-            />
-            <div class="card-body">
-              <h5
-                class="card-title text-truncate"
-                [routerLink]="['/product', product.id]"
-              >
-                {{ product.pname | limitWords : 10 }}
-              </h5>
-              <!-- <p class="card-text text-muted small">
+            >
+              {{ product.pname | limitWords : 10 }}
+            </h5>
+            <!-- <p class="card-text text-muted small">
                 {{ product.description | limitWords : 15 }}
               </p> -->
-              <div class="d-flex justify-content-between align-items-center">
-                {{ product?.psp | currency : "INR" : "₹" }}
+            <div class="d-flex justify-content-between align-items-center">
+              {{ product?.psp | currency : "INR" : "₹" }}
 
-                <small class="text-dark">
-                  <s>{{ product?.pop | currency : "INR" : "₹" }}</s>
-                </small>
+              <small class="text-dark">
+                <s>{{ product?.pop | currency : "INR" : "₹" }}</s>
+              </small>
 
-                <span
-                  *ngIf="
-                    product?.psp && product?.pop && product.pop > product.psp
-                  "
-                  class="badge rounded-pill bg-danger ms-2"
-                >
-                  {{ calculateDiscount(product.psp, product.pop) }}% OFF
-                </span>
-              </div>
-              <div class="text-center mt-3">
-                <button
-                  [routerLink]="['/product', product.id]"
-                  class="btn btn-outline-primary btn-sm"
-                >
-                  View Details
-                </button>
-              </div>
+              <span
+                *ngIf="
+                  product?.psp && product?.pop && product.pop > product.psp
+                "
+                class="badge rounded-pill bg-danger ms-2"
+              >
+                {{ calculateDiscount(product.psp, product.pop) }}% OFF
+              </span>
             </div>
-            <!-- Hover Icons -->
-            <div class="product-hover-icons">
+            <div class="text-center mt-3">
               <button
-                class="icon-btn wishlist-btn"
-                title="Add to Wishlist"
-                (click)="addToWishlist(product)"
+                [routerLink]="['/product', product.id]"
+                class="btn btn-outline-primary btn-sm"
               >
-                <i class="fa-solid fa-heart"></i>
-              </button>
-              <button
-                class="icon-btn compare-btn"
-                title="Add to Compare"
-                (click)="addToCompare(product)"
-              >
-                <i class="fa-solid fa-code-compare"></i>
-              </button>
-              <button
-                class="icon-btn me-3 position-relative text-light"
-                title="Cart"
-                (click)="addToCart(product)"
-              >
-                <i class="bi bi-cart"></i>
+                View Details
               </button>
             </div>
+          </div>
+          <!-- Hover Icons -->
+          <div class="product-hover-icons">
+            <button
+              class="icon-btn wishlist-btn"
+              title="Add to Wishlist"
+              (click)="addToWishlist(product)"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
+            <button
+              class="icon-btn compare-btn"
+              title="Add to Compare"
+              (click)="addToCompare(product)"
+            >
+              <i class="fa-solid fa-code-compare"></i>
+            </button>
+            <button
+              class="icon-btn me-3 position-relative text-light"
+              title="Cart"
+              (click)="addToCart(product)"
+            >
+              <i class="bi bi-cart"></i>
+            </button>
           </div>
         </div>
       </div>

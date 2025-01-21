@@ -28,22 +28,33 @@
   background-color: #f1f1f1;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for mobile view */
 @media screen and (max-width: 768px) {
-  .compare-table thead {
-    display: none;
-    /* Hide table headers on small screens */
+
+  .compare-table th,
+  .compare-table td {
+    padding: 8px;
+    font-size: 0.9rem;
   }
 
-  .compare-table,
-  .compare-table tbody,
-  .compare-table tr,
+  .compare-table thead {
+    display: block;
+  }
+
+  .compare-table tbody {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .compare-table tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
   .compare-table td {
     display: block;
-    width: 100%;
-  }
-
-  .compare-table td {
     text-align: right;
     position: relative;
     padding-left: 50%;
@@ -64,52 +75,17 @@
   }
 }
 
-/* Visual separator for smaller screens */
-.compare-table td {
-  padding: 15px 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.compare-table td:last-child {
-  border-bottom: none;
-}
-
-/* Card styling for mobile */
-.card {
-  border-radius: 10px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.card-body {
-  padding: 15px;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.text-success {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.btn-outline-danger {
-  border-radius: 20px;
-  font-size: 0.85rem;
-}
-
 /* Hover effect for table rows */
 .table-hover tbody tr:hover {
   background-color: #f8f9fa;
 }
+
 /* Style for product images in the comparison table */
 .product-image {
-  max-height: 150px; /* Adjust the height */
-  max-width: 100px; /* Adjust the width */
-  object-fit: contain; /* Ensures the aspect ratio is maintained */
-  border: 1px solid #ddd; /* Optional: Add a border for better visibility */
-  border-radius: 5px; /* Optional: Add rounded corners */
-  padding: 5px; /* Optional: Add some padding */
+  max-height: 150px;
+  max-width: 100px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
 }

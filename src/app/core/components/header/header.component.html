@@ -55,7 +55,9 @@
     >
       Customers
     </button>
-    <button class="nav-link" routerLink="orders">Orders</button>
+    <button class="nav-link" routerLink="orders" (click)="checkLogin()">
+      Orders
+    </button>
     <!-- <button
       *ngIf="loggedInUser?.role === 'user'"
       class="nav-link"
@@ -235,7 +237,13 @@
             </button>
           </li>
           <li>
-            <button class="dropdown-item" routerLink="orders">Orders</button>
+            <button
+              class="dropdown-item"
+              routerLink="orders"
+              (click)="checkLogin()"
+            >
+              Orders
+            </button>
           </li>
           <!-- <li *ngIf="loggedInUser?.role === 'user'">
             <button class="dropdown-item" routerLink="userOrders">

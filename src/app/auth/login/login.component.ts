@@ -19,8 +19,7 @@ import { AuthService } from '../../core/services/auth/auth.service';
 export class LoginComponent implements OnInit {
   myForm: FormGroup;
   hide = true;
-
-  checkStatus = false;
+  errorMessage: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -60,15 +59,19 @@ export class LoginComponent implements OnInit {
     if (this.myForm.valid) {
       const { email, password } = this.myForm.value;
 
-      this.authService.login(email, password).subscribe((user) => {
-        if (user) {
-          // Navigate based on user role
-          this.router.navigate([user.role]);
-        }
+      this.authService.login(email, password).subscribe({
+        next: (user) => {
+          if (user) {
+            this.errorMessage = ''; // Clear any previous error
+            this.router.navigate([user.role]);
+          }
+        },
+        error: (err) => {
+          // Show an error message in the template
+          this.errorMessage = 'Invalid email or password. Please try again.';
+        },
       });
-      this.checkStatus = false;
     }
-    this.checkStatus = true;
   }
 
   toggleHide() {

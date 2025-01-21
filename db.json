@@ -700,6 +700,18 @@
       "psp": 27599,
       "pop": 27999,
       "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494907/uploads/piru823ywbdo1mfcatpi.webp"
+    },
+    {
+      "id": "fd33eff7-91f1-429f-ac6e-1063ee6a39f8",
+      "pname": "Samsung A057 A05S 6/128 GB Black",
+      "brand": "Samsung",
+      "description": "1. 6 GB RAM | 128 GB ROM\n2. 17.02 cm (6.7 inch) Full HD+ Display\n3. 50MP + 2MP + 2MP | 13MP Front Camera\n4. 5000 mAh Battery\n5. Qualcomm SM6225 Snapdragon 680 4G (6 nm) Processor",
+      "color": "GB Black",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 12599,
+      "pop": 13599,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736509261/uploads/tmrv4akkqaqqgagjcupt.webp"
     }
   ],
   "wishlist": [
@@ -714,6 +726,18 @@
       "psp": 69799,
       "pop": 69999,
       "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736494567/uploads/ho3t9mv86m8ptzxgmgth.webp"
+    },
+    {
+      "id": "2c654f84-e92f-477b-91a4-1ed9b669a52d",
+      "pname": "Redmi 12 5G 6/128 GB Moonstone Silver",
+      "brand": "Redmi",
+      "description": "1. 6 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n2. 17.25 cm (6.79 inch) Full HD+ Display\n3. 50MP + 2MP | 8MP Front Camera\n4. 5000 mAh Battery\n5. Snapdragon 4 Gen 2 Processor",
+      "color": "Moonstone Silver",
+      "disksize": "128 GB",
+      "ram": "6 GB",
+      "psp": 12099,
+      "pop": 12499,
+      "image": "https://res.cloudinary.com/djwzctllj/image/upload/v1736508456/uploads/f53ezqjysmkccpi3pi29.webp"
     }
   ],
   "subscribers": [
